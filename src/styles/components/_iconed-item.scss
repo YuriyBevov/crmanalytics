@@ -1,0 +1,15 @@
+.iconed-item {
+  @extend .flex-column;
+  align-items: center;
+  padding: 5px;
+  height: inherit;
+
+  img {
+    margin-bottom: 20px;
+  }
+
+  .lw-title-sm {
+    margin-bottom: 10px;
+
+  }
+}

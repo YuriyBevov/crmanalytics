@@ -1,2 +1,17 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/main-btn
+
 section.lw-section
-  .lw-container
+  .lw-container.lw-section-column-container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Как мы работаем',
+      bitrixLogoExcluded: true
+    })
+
+    +main-btn({
+      tag: 'button',
+      type: 'button',
+      cls: '',
+      btnText: 'Рассчитать стоимость внедрения'
+    })

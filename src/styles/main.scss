@@ -7,9 +7,19 @@
 @import "extends";
 @import "common";
 
+
+@import "./layout/header";
+
 /* Компоненты */
+@import "./components/main-logo";
+@import "./components/bitrix-logo";
+@import "./components/main-nav";
+@import "./components/burger";
+@import "./components/iconed-item";
 
 /* Секции */
+@import "./sections/hero";
+@import "./sections/features";
 /* Модальные окна */
 
 

@@ -1,0 +1,24 @@
+.burger {
+  @extend .btn-reset;
+  @extend .flex-column;
+  justify-content: space-between;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+
+  @extend .hover-opacity;
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--info);
+  }
+
+  display: none;
+
+  @include m-b-down(1140px) {
+    display: flex;
+  }
+}

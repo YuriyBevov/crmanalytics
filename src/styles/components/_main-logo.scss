@@ -1,0 +1,10 @@
+.main-logo {
+  @extend .flex-centered-content;
+  @extend .hover-opacity;
+
+  img {
+    width: 160px;
+    height: 60px;
+    object-fit: contain;
+  }
+}

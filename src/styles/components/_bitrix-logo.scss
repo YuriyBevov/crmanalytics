@@ -1,0 +1,10 @@
+.bitrix-logo {
+  font-family: var(--main-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--bitrix);
+
+  & > span {
+    color: var(--24);
+  }
+}

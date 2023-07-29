@@ -9,15 +9,18 @@
 
 html {
   box-sizing: border-box;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+  -webkit-text-size-adjust: none;
 }
 
 html,
 body {
   width: 100%;
   min-height: 100vh;
-  min-height: fill-available;
-  min-height: -webkit-fill-available;
-  -webkit-text-size-adjust: none;
+  //min-height: fill-available;
+  //min-height: -webkit-fill-available;
+  //-webkit-text-size-adjust: none;
 }
 
 body {

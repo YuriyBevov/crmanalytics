@@ -1,2 +1,17 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/main-btn
+
 section.lw-section
-  .lw-container
+  .lw-container.lw-section-column-container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Компетенции и сертификаты',
+      bitrixLogoExcluded: true
+    })
+
+    +main-btn({
+      tag: 'a',
+      href: 'company.html',
+      cls: '',
+      btnText: 'Компетенции и сертификаты'
+    })

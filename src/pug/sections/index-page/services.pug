@@ -1,2 +1,16 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/main-btn
+
 section.lw-section
-  .lw-container
+  .lw-container.lw-section-column-container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Наши услуги&nbsp;по'
+    })
+
+    +main-btn({
+      tag: 'button',
+      type: 'button',
+      cls: '',
+      btnText: 'Получить предложение по услугам'
+    })

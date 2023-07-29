@@ -1,0 +1,8 @@
+mixin iconed-icon(data)
+  .iconed-item
+    img(src=`../assets/img/${data.iconPath}.png` alt= data.title width= data.iconW height= data.iconH)
+
+    span.lw-title-sm!= data.title
+    if data.text
+      p.lw-base-text!= data.text
+

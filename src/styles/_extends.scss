@@ -87,8 +87,10 @@
 .hover-opacity {
   transition: opacity var(--main-transition);
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
+  @include m-b-mobile-lg-up {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
   }
 }

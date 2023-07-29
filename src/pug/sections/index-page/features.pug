@@ -1,2 +1,52 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/main-btn
+include ../../mixins/iconed-icon
+
 section.lw-section
-  .lw-container
+  .lw-container.lw-section-column-container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Мы специализируемся на',
+      epilog: '<br>и&nbsp;уже увеличили продажи в&nbsp;этих отраслях'
+    })
+
+    ul.features__list
+      li.features__list-item
+        +iconed-icon({
+          iconPath: 'features-icon/retail-icon',
+          iconW: '80',
+          iconH: '80',
+
+          title: 'Опт и розница'
+        })
+      li.features__list-item
+        +iconed-icon({
+          iconPath: 'features-icon/tender-icon',
+          iconW: '80',
+          iconH: '80',
+
+          title: 'Тендеры'
+        })
+      li.features__list-item
+        +iconed-icon({
+          iconPath: 'features-icon/hr-icon',
+          iconW: '80',
+          iconH: '80',
+
+          title: 'HR-аналитика'
+        })
+      li.features__list-item
+        +iconed-icon({
+          iconPath: 'features-icon/prod-icon',
+          iconW: '80',
+          iconH: '80',
+
+          title: 'Производственные компании'
+        })
+
+    +main-btn({
+      tag: 'button',
+      type: 'button',
+      cls: '',
+      btnText: 'Получить кейсы на почту'
+    })

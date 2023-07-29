@@ -1,0 +1,29 @@
+.hero {
+  position: relative;
+  @extend .flex-column;
+
+  height: fit-content;
+  min-height: 768px;
+  padding: 360px 0;
+  padding-bottom: 50px;
+
+  margin-top: -175px;
+  border-bottom: 32px solid var(--danger);
+  transform: skew(0, -4deg);
+  margin-bottom: 60px;
+
+  background-color: var(--primary);
+  background-image: url("../assets/img/hero-bg@1x.jpg");
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    @extend .flex-column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transform: skew(0, 4deg);
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

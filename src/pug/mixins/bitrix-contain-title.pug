@@ -1,0 +1,9 @@
+mixin bitrix-contain-title(data)
+  #{data.tag}(class= data.cls ? data.cls : null).lw-section-title
+    if data.prolog
+      span!= data.prolog
+
+    if !data.bitrixLogoExcluded
+      include ../components/bitrix-logo
+    if data.epilog
+      span!= data.epilog

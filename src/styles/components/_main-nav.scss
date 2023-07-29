@@ -1,0 +1,27 @@
+.main-nav {
+  @extend .flex-wrap;
+  align-items: center;
+  margin-left: auto;
+
+  &__list {
+    @extend .list-reset;
+    @extend .flex-wrap;
+    align-items: center;
+
+    @include m-b-down(1140px) {
+      display: none;
+    }
+  }
+
+  &__list-item {
+    a {
+      @extend .flex-centered-content;
+      font-size: 20px;
+      padding: 10px;
+      margin: 0 8px;
+      color: var(--info);
+
+      @extend .hover-opacity;
+    }
+  }
+}

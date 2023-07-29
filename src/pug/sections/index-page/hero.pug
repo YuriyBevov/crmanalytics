@@ -1,2 +1,17 @@
-section.lw-section
-  .lw-container
+include ../../mixins/main-btn
+
+section.lw-section.hero
+  .lw-container.hero__container
+
+    h1.lw-main-title
+      | АВТОМАТИЗИРУЕМ ПРОЦЕССЫ ПРОДАЖ НА ОСНОВЕ CRM&nbsp;
+      include ../../components/bitrix-logo
+
+    p.lw-main-text За 14 дней создаем систему и выводим компанию на уровень уверенного экономического роста с гарантией результата.
+
+    +main-btn({
+      tag: 'button',
+      type: 'button',
+      cls: '',
+      btnText: 'Заказать внедрение'
+    })
