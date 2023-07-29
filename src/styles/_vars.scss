@@ -1,0 +1,40 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+
+:root {
+    // base
+    --main-font: "Roboto", sans-serif;
+    --secondary-font: "Poppins", sans-serif;
+    --alt-font: "PFBeauSansPro", sans-serif;
+
+    --content-width: 1500px;
+    --content-fluid-width: 1790px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+
+    // colors
+    --white: #fff;
+    --black: #000000;
+
+    --primary: #172755;
+    --secondary: #61709f;
+    --success: #f58128;
+    --info: #8794ba;
+    //--warning: #e0e0e0;
+    --danger: #fc2f58;;
+    --light: #f8f9ff;
+    //--dark: #f8f8f8;
+
+    --bitrix: #0bbbef;
+    --24: #005893;
+
+    --main-bg: var(--light);
+
+    --main-transition: .25s ease-in;
+
+    // scrollbar
+    --main-scrollbar-width: 6px;
+    --main-scrollbar-color: var(--light);
+    --main-scrollbar-thumb-color: var(--primary);
+  }
