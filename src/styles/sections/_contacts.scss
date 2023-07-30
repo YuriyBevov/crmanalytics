@@ -2,17 +2,18 @@
   &__list {
     @extend .list-reset;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
-    max-width: 1360px;
+    max-width: 960px;
     margin: 0 auto;
 
     @include m-b-desktop-down {
-      max-width: 960px
+      max-width: 660px
     }
 
     @include m-b-tablet-down {
       grid-template-columns: 1fr;
+      grid-gap: 20px;
     }
   }
 
@@ -21,18 +22,27 @@
 
     span {
       display: inline-block;
-      font-family: var(--secondary-font);
-      font-size: 18px;
-      font-weight: 300;
-      margin-bottom: 8px;
+      //font-family: var(--secondary-font);
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 5px;
       color: var(--secondary);
+      text-align: center;
+      @include m-b-desktop-down {
+
+      }
     }
 
     &-content {
       display: flex;
       align-items: center;
+      justify-content: center;
+      @include m-b-desktop-down {
+
+      }
 
       svg {
+        display: none;
         margin-right: 10px;
         fill: var(--danger);
 
@@ -52,15 +62,16 @@
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
-        width: calc(100% - 50px);
+        //width: calc(100% - 50px);
         color: var(--primary);
-
+        text-align: center;
         @include m-b-desktop-down {
           font-size: 24px;
         }
 
         @include m-b-laptop-down {
           font-size: 22px;
+
         }
 
         @include m-b-tablet-down {

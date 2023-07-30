@@ -32,6 +32,10 @@ body {
   line-height: 1.2;
   background-color: var(--main-bg-color);
 
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   &.body-locked {
     overflow: hidden;
   }

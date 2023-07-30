@@ -8,6 +8,11 @@
   &__list-item {
     position: relative;
     padding-left: 45px;
+    margin-bottom: 25px;
+
+    .lw-title-sm {
+      text-align: initial;
+    }
 
     svg {
       position: absolute;
