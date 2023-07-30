@@ -57,16 +57,21 @@
   &-main-btn {
     @extend .btn-reset;
     @extend .flex-centered-content;
-    padding: 15px 25px 13px;
+    padding: 15px 20px 13px;
     width: fit-content;
     min-height: 50px;
     text-transform: uppercase;
     line-height: 1;
     border-radius: 10px;
+    text-align: center;
     color: var(--white);
     background-color: var(--danger);
 
     @extend .hover-opacity;
+
+    @include m-b-mobile-lg-down {
+      font-size: 14px;
+    }
   }
 
   &-section {
@@ -135,6 +140,8 @@
   }
 
   &-base-text {
+    padding-right: 20px;
+    margin-top: 0;
     color: var(--secondary);
 
     @include m-b-mobile-lg-down {

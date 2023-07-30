@@ -1,17 +1,28 @@
 include ../../mixins/bitrix-contain-title
 include ../../mixins/main-btn
 
-section.lw-section
-  .lw-container.lw-section-column-container
-    +bitrix-contain-title({
-      tag: 'h2',
-      prolog: 'Компетенции и сертификаты',
-      bitrixLogoExcluded: true
-    })
+section.lw-section.licenses
+  .lw-container
 
-    +main-btn({
-      tag: 'a',
-      href: 'company.html',
-      cls: '',
-      btnText: 'Компетенции и сертификаты'
-    })
+    .licenses__grid
+      .licenses__grid-item
+        img(src="./assets/img/partner-certificate.png" alt="Сертификат партнера" width="700" height="500")
+
+      .licenses__grid-item
+        +bitrix-contain-title({
+          tag: 'h2',
+          prolog: 'Компетенции и сертификаты',
+          bitrixLogoExcluded: true
+        })
+
+        p.lw-base-text
+          | Правильная автоматизация процессов повышает эффективность работы любой компании. Даже просто собрать в одном месте все данные
+          | клиентов - уже прорыв. Почти все компании либо уже внедрили CRM-системы, либо выбирают их. Это стандарт бизнеса.
+          | Внедрить CRM – значит облегчить жизнь и владельцу бизнеса, и управляющему этим бизнесом, и работникам предприятия, и клиентам компании.
+
+        +main-btn({
+          tag: 'a',
+          href: 'company.html',
+          cls: '',
+          btnText: 'Карточка партнера на официальном сайте БИТРИКС24'
+        })

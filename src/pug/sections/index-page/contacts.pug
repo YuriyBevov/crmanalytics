@@ -7,3 +7,36 @@ section.lw-section
       prolog: 'Наши контакты',
       bitrixLogoExcluded: true
     })
+
+    ul.contacts__list
+      li.contacts__list-item
+        span Наш адрес:
+
+        .contacts__list-item-content
+          svg(width="40" height="40")
+            use(xlink:href="./assets/sprite.svg#icon-pin")
+          address Санкт-Петербург, Пискаревский пр, 63Б
+
+      li.contacts__list-item
+        span Телефон:
+
+        .contacts__list-item-content
+          svg(width="40" height="40")
+            use(xlink:href="./assets/sprite.svg#icon-phone")
+          a(href="tel:+79219260260") 8 921 926 02 60
+
+      li.contacts__list-item
+        span Электронная почта:
+
+        .contacts__list-item-content
+          svg(width="40" height="40")
+            use(xlink:href="./assets/sprite.svg#icon-mail")
+          a(href="mailto:hello@crmanalytics.ru") hello@crmanalytics.ru
+
+      li.contacts__list-item
+        span Техническая поддержка:
+
+        .contacts__list-item-content
+          svg(width="40" height="40")
+            use(xlink:href="./assets/sprite.svg#icon-phones")
+          a(href="mailto:support@crmanalytics.ru") support@crmanalytics.ru

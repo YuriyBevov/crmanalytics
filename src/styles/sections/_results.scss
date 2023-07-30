@@ -1,0 +1,19 @@
+.results {
+  &__list {
+    @extend .list-reset;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 45px;
+
+    svg {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      fill: var(--danger);
+    }
+  }
+}
