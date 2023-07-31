@@ -1,0 +1,18 @@
+.services {
+  &__list {
+    @extend .list-reset;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 40px;
+
+    /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+    @include m-b-tablet-down {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__list-item {
+  }
+}

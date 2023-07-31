@@ -349,7 +349,7 @@ template {
 /* stylelint-disable alpha-value-notation */
 :root {
   --main-font: "Roboto", sans-serif;
-  --secondary-font: "Poppins", sans-serif;
+  --secondary-font: "Inter", sans-serif;
   --alt-font: "PFBeauSansPro", sans-serif;
   --content-width: 1500px;
   --content-fluid-width: 1790px;
@@ -421,7 +421,49 @@ template {
 }
 @font-face {
   font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
   src: url("../assets/fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -533,7 +575,7 @@ a {
 }
 
 /*resets*/
-.list-reset, .contacts__list, .results__list, .features__list, .main-nav__list {
+.list-reset, .contacts__list, .results__list, .services__list, .features__list, .main-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -623,7 +665,9 @@ a {
 }
 @media (max-width: 533px) {
   .lw-main-title {
-    font-size: 18px;
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 20px;
   }
 }
 .lw-main-text {
@@ -701,15 +745,14 @@ a {
 }
 @media (max-width: 533px) {
   .lw-section-title {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 20px;
   }
 }
 .lw-title-sm {
   display: inline-block;
-  font-family: var(--secondary-font);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
@@ -725,15 +768,11 @@ a {
     font-size: 16px;
   }
 }
-@media (max-width: 533px) {
-  .lw-title-sm {
-    font-size: 14px;
-  }
-}
 .lw-base-text {
   padding-right: 20px;
   margin-top: 0;
   color: var(--secondary);
+  opacity: 0.6;
 }
 @media (max-width: 533px) {
   .lw-base-text {
@@ -831,13 +870,28 @@ a {
   -ms-flex-align: center;
   align-items: center;
   padding: 5px;
-  height: inherit;
+  height: 100%;
 }
 .iconed-item img {
   margin-bottom: 20px;
 }
+@media (max-width: 960px) {
+  .iconed-item img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .iconed-item img {
+    width: 60px;
+    height: 60px;
+  }
+}
 .iconed-item .lw-title-sm {
   margin-bottom: 10px;
+}
+.iconed-item .lw-base-text {
+  text-align: center;
 }
 
 /* Секции */
@@ -901,6 +955,22 @@ a {
   height: 100%;
 }
 
+.services__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 40px;
+  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+}
+@media (max-width: 767px) {
+  .services__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
 .results__list {
   max-width: 1160px;
   margin: 0 auto;
@@ -931,19 +1001,26 @@ a {
   -ms-flex-align: center;
   align-items: center;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1439px) {
   .licenses__grid {
-    grid-gap: 10px;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    grid-gap: 20px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .licenses__grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     padding-bottom: 70px;
+  }
+}
+@media (max-width: 1023px) {
+  .licenses__grid-item {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 .licenses__grid-item .lw-section-title {
@@ -951,20 +1028,32 @@ a {
   margin: 0;
   margin-bottom: 25px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .licenses__grid-item .lw-section-title {
     text-align: center;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .licenses__grid-item .lw-base-text {
     text-align: center;
+    max-width: 75vw;
+  }
+}
+@media (max-width: 767px) {
+  .licenses__grid-item .lw-base-text {
+    max-width: 90vw;
   }
 }
 .licenses__grid-item .lw-main-btn {
+  margin-top: 10px;
   line-height: 1.2;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
+  .licenses__grid-item .lw-main-btn {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1023px) {
   .licenses__grid-item:nth-child(2) {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
@@ -980,6 +1069,8 @@ a {
     max-height: 400px;
     -o-object-fit: contain;
     object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
   }
   .licenses__grid-item .lw-main-btn {
     position: absolute;
@@ -989,7 +1080,7 @@ a {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 100%;
-    max-width: 450px;
+    max-width: 600px;
   }
 }
 

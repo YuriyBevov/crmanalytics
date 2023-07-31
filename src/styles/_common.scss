@@ -33,7 +33,9 @@
     }
 
     @include m-b-mobile-lg-down {
-      font-size: 18px;
+      font-size: 22px;
+      margin: 0;
+      margin-bottom: 20px;
     }
   }
 
@@ -112,16 +114,16 @@
     }
 
     @include m-b-mobile-lg-down {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 20px;
     }
   }
 
   &-title-sm {
     display: inline-block;
-    font-family: var(--secondary-font);
+    //font-family: var(--secondary-font);
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 10px;
@@ -135,16 +137,13 @@
     @include m-b-tablet-down {
       font-size: 16px;
     }
-
-    @include m-b-mobile-lg-down {
-      font-size: 14px;
-    }
   }
 
   &-base-text {
     padding-right: 20px;
     margin-top: 0;
     color: var(--secondary);
+    opacity: .6;
 
     @include m-b-mobile-lg-down {
       font-size: 14px;
