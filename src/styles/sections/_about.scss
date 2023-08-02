@@ -1,0 +1,13 @@
+.about {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    @include m-b-tablet-down {
+      grid-template-columns: 1fr;
+    }
+  }
+}

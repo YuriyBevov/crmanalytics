@@ -17,6 +17,10 @@
   background-position: center;
   background-size: cover;
 
+  @include m-b-tablet-down {
+    margin-bottom: 30px;
+  }
+
   &__container {
     @extend .flex-column;
     align-items: center;

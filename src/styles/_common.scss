@@ -3,6 +3,10 @@
     margin: 0 auto;
     padding: 0 var(--container-offset);
     max-width: var(--container-width);
+
+    @include m-b-mobile-lg-down {
+      padding: 0 10px;
+    }
   }
 
   &-container-fluid {
@@ -78,6 +82,18 @@
 
   &-section {
     padding: 50px 0;
+
+    @include m-b-laptop-down {
+      padding: 40px 0;
+    }
+
+    @include m-b-tablet-down {
+      padding: 35px 0;
+    }
+
+    @include m-b-mobile-lg-down {
+      padding: 20px 0;
+    }
   }
 
   &-section-column-container {
@@ -109,12 +125,12 @@
     }
 
     @include m-b-tablet-down {
-      font-size: 20px;
+      font-size: 26px;
       margin-bottom: 30px;
     }
 
     @include m-b-mobile-lg-down {
-      font-size: 18px;
+      font-size: 20px;
       margin-bottom: 20px;
     }
   }
