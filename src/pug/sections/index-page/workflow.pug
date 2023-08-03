@@ -1,13 +1,17 @@
 include ../../mixins/bitrix-contain-title
 include ../../mixins/main-btn
 
-section.lw-section
+section.lw-section.workflow
   .lw-container.lw-section-column-container
     +bitrix-contain-title({
       tag: 'h2',
       prolog: 'Как мы работаем',
       bitrixLogoExcluded: true
     })
+
+    p.lw-base-text.workflow__desc Мы разработали конкретный и последовательный план внедрения Битрикс24, который позволит в четкие сроки реализовать необходимый функционал и запустить систему в работу.
+
+    include ../../components/workflow-table
 
     +main-btn({
       tag: 'button',
