@@ -121,23 +121,20 @@
 
     @include m-b-laptop-down {
       font-size: 28px;
-      margin-bottom: 35px;
     }
 
     @include m-b-tablet-down {
       font-size: 26px;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     @include m-b-mobile-lg-down {
       font-size: 20px;
-      margin-bottom: 20px;
     }
   }
 
   &-title-sm {
     display: inline-block;
-    //font-family: var(--secondary-font);
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
@@ -168,5 +165,9 @@
 
   &-accent-color {
     color: var(--danger);
+  }
+
+  &-primary-color {
+    color: var(--primary);
   }
 }

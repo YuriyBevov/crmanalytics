@@ -3,8 +3,12 @@
   @extend .hover-opacity;
 
   img {
-    width: 160px;
-    height: 60px;
+    width: 120px;
+    height: auto;
     object-fit: contain;
+
+    @include m-b-mobile-lg-down {
+      width: 100px;
+    }
   }
 }

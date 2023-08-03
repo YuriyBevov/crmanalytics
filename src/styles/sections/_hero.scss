@@ -13,12 +13,18 @@
   margin-bottom: 60px;
 
   background-color: var(--primary);
-  background-image: url("../assets/img/hero-bg@1x.jpg");
-  background-position: center;
-  background-size: cover;
+  //background-image: url("../assets/img/hero-bg@1x.jpg");
+  //background-position: center;
+  //background-size: contain;
 
   @include m-b-tablet-down {
     margin-bottom: 30px;
+    padding-top: 260px;
+    padding-bottom: 0;
+  }
+
+  @include m-b-mobile-lg-down {
+    min-height: 574px;
   }
 
   &__container {
@@ -29,5 +35,11 @@
     transform: skew(0, 4deg);
     padding-top: 100px;
     padding-bottom: 100px;
+
+    @include m-b-tablet-down {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
   }
 }

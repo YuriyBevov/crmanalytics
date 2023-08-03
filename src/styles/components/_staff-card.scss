@@ -1,0 +1,74 @@
+.staff-card {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  grid-gap: 60px;
+  align-items: center;
+  max-width: 1000px;
+  padding: 10px;
+  margin: 5px 0;
+
+  @include m-b-laptop-down {
+    grid-gap: 30px;
+  }
+
+  @include m-b-tablet-down {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+
+    @include m-b-tablet-down {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    @include m-b-mobile-lg-down {
+      max-width: 200px;
+    }
+  }
+
+  &__content {
+    @extend .flex-column;
+
+    @include m-b-tablet-down {
+      align-items: center;
+    }
+  }
+
+  .lw-title-sm {
+    margin-bottom: 10px;
+    text-align: left;
+
+    @include m-b-tablet-down {
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    display: inline-block;
+    margin-bottom: 30px;
+
+    @include m-b-laptop-down {
+      margin-bottom: 15px;
+    }
+
+    @include m-b-tablet-down {
+      text-align: center;
+    }
+  }
+
+  .lw-base-text {
+    margin-bottom: 0;
+
+    @include m-b-laptop-down {
+      font-size: 14px;
+    }
+
+    @include m-b-tablet-down {
+     text-align: center;
+    }
+  }
+}

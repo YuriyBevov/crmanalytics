@@ -1,0 +1,8 @@
+mixin staff-card(data)
+  .staff-card
+    img(src=`./assets/img/${data.img}` alt= data.name width="300" height="300")
+
+    .staff-card__content
+      span.lw-title-sm.lw-accent-color!= data.name
+      span.staff-card__desc.lw-primary-color!= data.desc
+      span.lw-base-text!= data.text
