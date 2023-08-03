@@ -1,0 +1,7 @@
+mixin case-card(data)
+  .case-card
+    img(src=`./assets/img/${data.img}` alt= data.title width="300" height="300")
+
+    .case-card__content
+      span.lw-title-sm!= data.title
+      span.lw-base-text!= data.text

@@ -1342,7 +1342,7 @@ a {
   justify-content: center;
 }
 
-.flex-column, .contacts__list-item, .licenses__grid-item, .hero__container, .hero, .staff-card__content, .about-item__header-content, .iconed-item, .burger, .lw-section-column-container {
+.flex-column, .contacts__list-item, .licenses__grid-item, .hero__container, .hero, .case-card__content, .staff-card__content, .about-item__header-content, .iconed-item, .burger, .lw-section-column-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1794,6 +1794,85 @@ a {
   }
 }
 
+.main-slider-container .swiper-button-next,
+.main-slider-container .swiper-button-prev {
+  color: var(--primary);
+}
+@media (max-width: 533px) {
+  .main-slider-container .swiper-button-next::after,
+  .main-slider-container .swiper-button-prev::after {
+    font-size: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .main-slider-container .swiper-button-next::after,
+  .main-slider-container .swiper-button-prev::after {
+    font-size: 20px;
+  }
+}
+@media (max-width: 368px) {
+  .main-slider-container .swiper-button-next,
+  .main-slider-container .swiper-button-prev {
+    display: none;
+  }
+}
+@media (max-width: 533px) {
+  .main-slider-container .swiper-button-prev {
+    left: 0;
+  }
+}
+@media (max-width: 533px) {
+  .main-slider-container .swiper-button-next {
+    right: 0;
+  }
+}
+
+.main-slider.staff-slider {
+  max-width: 1000px;
+}
+.main-slider.case-slider {
+  max-width: 850px;
+}
+@media (max-width: 767px) {
+  .main-slider.case-slider {
+    max-width: 400px;
+  }
+}
+.main-slider-container {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0 100px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1023px) {
+  .main-slider-container {
+    padding: 0 75px;
+  }
+}
+@media (max-width: 767px) {
+  .main-slider-container {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 533px) {
+  .main-slider-container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 420px) {
+  .main-slider-container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 368px) {
+  .main-slider-container {
+    padding: 0;
+  }
+}
+
 .staff-card {
   display: -ms-grid;
   display: grid;
@@ -1818,6 +1897,11 @@ a {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 533px) {
+  .staff-card {
+    grid-gap: 10px;
+  }
+}
 .staff-card img {
   width: 100%;
   max-width: 350px;
@@ -1832,6 +1916,11 @@ a {
 @media (max-width: 533px) {
   .staff-card img {
     max-width: 200px;
+  }
+}
+@media (max-width: 533px) {
+  .staff-card img {
+    max-width: 150px;
   }
 }
 @media (max-width: 767px) {
@@ -1878,42 +1967,61 @@ a {
   }
 }
 
-.staff-slider {
-  max-width: 1000px;
-}
-.staff-slider-container {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 100%;
-  padding: 0 100px;
-  margin-bottom: 60px;
+.case-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 850px;
+  outline: 1px solid red;
 }
 @media (max-width: 1023px) {
-  .staff-slider-container {
-    padding: 0 75px;
+  .case-card {
+    grid-gap: 10px;
   }
 }
 @media (max-width: 767px) {
-  .staff-slider-container {
-    padding: 0 50px;
+  .case-card {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    max-width: 400px;
   }
 }
+.case-card__content {
+  padding: 20px;
+}
 @media (max-width: 533px) {
-  .staff-slider-container {
-    padding: 0;
+  .case-card__content {
+    padding: 10px;
   }
 }
-
-.staff-slider-container .swiper-button-next,
-.staff-slider-container .swiper-button-prev {
-  color: var(--primary);
+.case-card .lw-title-sm {
+  text-align: left;
 }
-@media (max-width: 533px) {
-  .staff-slider-container .swiper-button-next,
-  .staff-slider-container .swiper-button-prev {
-    display: none;
+@media (max-width: 767px) {
+  .case-card .lw-title-sm {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .case-card .lw-base-text {
+    text-align: center;
+    padding-right: 0;
+  }
+}
+.case-card img {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .case-card img {
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
 
@@ -1975,6 +2083,7 @@ a {
   grid-column-gap: 10px;
   grid-row-gap: 30px;
   margin-bottom: 40px;
+  padding: 0 25px;
 }
 @media (max-width: 767px) {
   .features__list {

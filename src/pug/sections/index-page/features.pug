@@ -1,6 +1,7 @@
 include ../../mixins/bitrix-contain-title
 include ../../mixins/main-btn
 include ../../mixins/iconed-icon
+include ../../mixins/case-card
 
 section.lw-section
   .lw-container.lw-section-column-container
@@ -43,6 +44,31 @@ section.lw-section
 
           title: 'Производственные компании'
         })
+
+    .main-slider-container
+      .swiper.main-slider.case-slider
+        .swiper-wrapper
+          .swiper-slide
+            +case-card({
+              img: 'case-card.jpg',
+              title: 'Внедрение БИТРИКС24 в компанию сферы услуг',
+              text: 'Внедрение Битрикс24 для компании ООО "Строй-Эксперт Консалт"'
+            })
+          .swiper-slide
+            +case-card({
+              img: 'case-card.jpg',
+              title: 'Внедрение БИТРИКС24 в компанию сферы услуг',
+              text: 'Внедрение Битрикс24 для компании ООО "Строй-Эксперт Консалт"'
+            })
+          .swiper-slide
+            +case-card({
+              img: 'case-card.jpg',
+              title: 'Внедрение БИТРИКС24 в компанию сферы услуг',
+              text: 'Внедрение Битрикс24 для компании ООО "Строй-Эксперт Консалт"'
+            })
+
+      .swiper-button-prev
+      .swiper-button-next
 
     +main-btn({
       tag: 'button',

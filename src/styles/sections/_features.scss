@@ -6,6 +6,7 @@
     grid-column-gap: 10px;
     grid-row-gap: 30px;
     margin-bottom: 40px;
+    padding: 0 25px;
 
     @include m-b-tablet-down {
       grid-template-columns: repeat(2, 1fr);

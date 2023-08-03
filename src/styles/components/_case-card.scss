@@ -1,0 +1,52 @@
+.case-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  align-items: center;
+  width: 100%;
+  max-width: 850px;
+  outline: 1px solid red;
+
+  @include m-b-laptop-down {
+    grid-gap: 10px;
+  }
+
+  @include m-b-tablet-down {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    max-width: 400px;
+  }
+
+  &__content {
+    padding: 20px;
+    @extend .flex-column;
+
+    @include m-b-mobile-lg-down {
+      padding: 10px;
+    }
+  }
+
+  .lw-title-sm {
+    text-align: left;
+
+    @include m-b-tablet-down {
+      text-align: center;
+    }
+  }
+
+  .lw-base-text {
+    @include m-b-tablet-down {
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+
+  img {
+    width: 100%;
+
+    @include m-b-tablet-down {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+}

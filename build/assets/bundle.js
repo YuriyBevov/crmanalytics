@@ -12,15 +12,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
-const staff = document.querySelector('.staff-slider');
-if (staff) {
-  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](staff, {
-    slidesPerView: 1,
-    spaceBetween: 60,
-    navigation: {
-      nextEl: '.staff-slider-container .swiper-button-next',
-      prevEl: '.staff-slider-container .swiper-button-prev'
-    }
+const sliders = document.querySelectorAll('.main-slider');
+if (sliders) {
+  sliders.forEach(slider => {
+    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
+      slidesPerView: 1,
+      spaceBetween: 60,
+      navigation: {
+        nextEl: '.main-slider-container .swiper-button-next',
+        prevEl: '.main-slider-container .swiper-button-prev'
+      }
+    });
   });
 }
 ;

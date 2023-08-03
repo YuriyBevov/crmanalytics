@@ -1,18 +1,18 @@
 import Swiper, { Navigation } from 'swiper';
 Swiper.use([Navigation]);
 
-const staff = document.querySelector('.staff-slider');
+const sliders = document.querySelectorAll('.main-slider');
 
-if(staff) {
-  new Swiper(staff, {
-    slidesPerView: 1,
-    spaceBetween: 60,
+if(sliders) {
+  sliders.forEach(slider => {
+    new Swiper(slider, {
+      slidesPerView: 1,
+      spaceBetween: 60,
 
-    navigation: {
-      nextEl: '.staff-slider-container .swiper-button-next',
-      prevEl: '.staff-slider-container .swiper-button-prev',
-    }
+      navigation: {
+        nextEl: '.main-slider-container .swiper-button-next',
+        prevEl: '.main-slider-container .swiper-button-prev',
+      }
+    });
   });
 };
-
-
