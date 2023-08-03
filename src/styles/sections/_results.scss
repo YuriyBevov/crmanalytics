@@ -1,23 +1,33 @@
 .results {
   &__list {
+    @extend .flex-column;
+    align-items: center;
     @extend .list-reset;
     max-width: 1160px;
     margin: 0 auto;
   }
 
   &__list-item {
+    @extend .flex-column;
+    align-items: center;
     position: relative;
-    padding-left: 45px;
+    //padding-left: 45px;
     margin-bottom: 25px;
+    max-width: 920px;
 
     .lw-title-sm {
-      text-align: initial;
+      //text-align: initial;
+    }
+
+    .lw-base-text {
+      padding: 0;
+      text-align: center;
     }
 
     svg {
-      position: absolute;
+      /*position: absolute;
       top: -5px;
-      left: 0;
+      left: 0;*/
       fill: var(--danger);
     }
   }

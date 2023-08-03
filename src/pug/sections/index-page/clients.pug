@@ -1,9 +1,32 @@
 include ../../mixins/bitrix-contain-title
 
-section.lw-section
+section.lw-section.clients
   .lw-container
-    +bitrix-contain-title({
-      tag: 'h2',
-      prolog: 'Наши клиенты',
-      bitrixLogoExcluded: true
-    })
+    .clients__grid
+      .clients__content
+        +bitrix-contain-title({
+          tag: 'h2',
+          prolog: 'Наши клиенты',
+          bitrixLogoExcluded: true
+        })
+
+        p.lw-base-text Мы предоставляем высокое качество услуг для удовлетворения потребностей наших клиентов и привлечения дополнительных повторных заказов.
+
+      .clients-slider-container
+        .swiper.clients-slider
+          .swiper-wrapper
+            .swiper-slide
+              img(src="./assets/img/clients-slider/cs-1.jpg" alt="" width="400" height="160")
+            .swiper-slide
+              img(src="./assets/img/clients-slider/cs-2.png" alt="" width="400" height="160")
+            .swiper-slide
+              img(src="./assets/img/clients-slider/cs-3.jpg" alt="" width="400" height="160")
+            .swiper-slide
+              img(src="./assets/img/clients-slider/cs-1.jpg" alt="" width="400" height="160")
+            .swiper-slide
+              img(src="./assets/img/clients-slider/cs-2.png" alt="" width="400" height="160")
+            .swiper-slide
+              img(src="./assets/img/clients-slider/cs-3.jpg" alt="" width="400" height="160")
+
+        .swiper-button-prev
+        .swiper-button-next

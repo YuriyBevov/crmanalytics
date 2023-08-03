@@ -13,9 +13,7 @@
   margin-bottom: 60px;
 
   background-color: var(--primary);
-  //background-image: url("../assets/img/hero-bg@1x.jpg");
-  //background-position: center;
-  //background-size: contain;
+  background: linear-gradient(226.59deg, #172755 24.26%, #2F4DA5 117.16%);
 
   @include m-b-tablet-down {
     margin-bottom: 30px;

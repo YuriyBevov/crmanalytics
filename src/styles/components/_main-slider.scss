@@ -1,35 +1,33 @@
-.main-slider-container {
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: var(--primary);
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary);
 
-    @include m-b-mobile-lg-down {
-      &::after {
-        font-size: 30px;
-      }
-    }
-
-    @include m-b-down(420px) {
-      &::after {
-        font-size: 20px;
-      }
-    }
-
-    @include m-b-down(368px) {
-      display: none;
+  @include m-b-mobile-lg-down {
+    &::after {
+      font-size: 30px;
     }
   }
 
-  .swiper-button-prev {
-    @include m-b-mobile-lg-down {
-      left: 0;
+  @include m-b-down(420px) {
+    &::after {
+      font-size: 20px;
     }
   }
 
-  .swiper-button-next {
-    @include m-b-mobile-lg-down {
-      right: 0;
-    }
+  @include m-b-down(368px) {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  @include m-b-mobile-lg-down {
+    left: 0;
+  }
+}
+
+.swiper-button-next {
+  @include m-b-mobile-lg-down {
+    right: 0;
   }
 }
 
