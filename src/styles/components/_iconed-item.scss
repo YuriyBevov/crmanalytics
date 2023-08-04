@@ -16,13 +16,18 @@
       width: 60px;
       height: 60px;
     }
+
+    @include m-b-mobile-lg-down {
+      margin-bottom: 10px;
+    }
   }
 
   .lw-title-sm {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
   .lw-base-text {
+    margin: 10px 0;
     text-align: center;
   }
 }

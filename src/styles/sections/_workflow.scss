@@ -4,6 +4,13 @@
     text-align: center;
     max-width: 1000px;
     margin-bottom: 60px;
+    padding: 0;
+
+    /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+    @include m-b-tablet-down {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
   }
 }
 

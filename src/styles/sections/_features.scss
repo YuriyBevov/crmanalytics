@@ -10,10 +10,12 @@
 
     @include m-b-tablet-down {
       grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
     }
 
     @include m-b-mobile-lg-down {
       grid-template-columns: 1fr;
+      grid-gap: 10px;
     }
   }
 
