@@ -1,2 +1,23 @@
 section.lw-section.offer
-  .lw-container
+  .lw-container-fluid.offer__container
+
+    .offer-form__wrapper
+      span.lw-section-title Оставьте заявку на <span class="lw-accent-color">внедрение</span>
+
+      form(action="#").offer-form
+        fieldset
+          input(type="text" placeholder="Имя*")
+
+        fieldset
+          input(type="text" placeholder="Фамилия*")
+
+        fieldset
+          .phone-field
+            input(type="tel" placeholder="Телефон")
+
+        fieldset
+          input(type="text" placeholder="Е-mail")
+
+        <small>Отправляя форму, вы соглашаетесь с <a href="#">условиями обработки</a> и использования персональных данных</small>
+
+        input(type="submit" value="Оставить заявку").lw-main-btn

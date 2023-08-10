@@ -3,8 +3,8 @@
 
 :root {
     // base
-    --main-font: "Roboto", sans-serif;
-    --secondary-font: "Inter", sans-serif;
+    --main-font: "Montserrat", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
     --alt-font: "PFBeauSansPro", sans-serif;
 
     --content-width: 1500px;
@@ -36,5 +36,5 @@
     // scrollbar
     --main-scrollbar-width: 12px;
     --main-scrollbar-color: var(--primary);
-    --main-scrollbar-thumb-color: var(--light);
+    --main-scrollbar-thumb-color: var(--danger);
   }

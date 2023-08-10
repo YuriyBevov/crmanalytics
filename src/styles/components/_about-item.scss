@@ -10,11 +10,9 @@
   .lw-base-text {
     padding: 0;
     margin-bottom: 0;
+
     @include m-b-laptop-down {
       font-size: 14px;
-    }
-
-    @include m-b-tablet-down {
       text-align: center;
     }
   }
@@ -26,16 +24,11 @@
 
     @include m-b-laptop-down {
       flex-direction: column;
-      align-items: flex-start;
-    }
-
-    @include m-b-tablet-down {
       align-items: center;
     }
   }
 
   &__header-value {
-    font-family: var(--alt-font);
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -43,7 +36,7 @@
     margin-right: 10px;
     color: var(--danger);
 
-    @include m-b-tablet-down {
+    @include m-b-laptop-down {
       margin-right: 0;
     }
   }
@@ -51,7 +44,7 @@
   &__header-content {
     @extend .flex-column;
 
-    span {
+    .lw-title-sm {
       display: inline-block;
       font-weight: 700;
       margin-bottom: 0;
@@ -61,7 +54,7 @@
         margin-bottom: 0px;
       }
 
-      @include m-b-tablet-down {
+      @include m-b-laptop-down {
         text-align: center;      }
     }
   }

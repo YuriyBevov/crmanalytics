@@ -1,6 +1,6 @@
 include ../../mixins/bitrix-contain-title
 include ../../mixins/main-btn
-include ../../mixins/iconed-icon
+include ../../mixins/illustrated-item
 
 section.lw-section.services
   .lw-container.lw-section-column-container
@@ -9,82 +9,86 @@ section.lw-section.services
       prolog: 'Наши услуги&nbsp;по'
     })
 
-    ul.services__list
-      li.services__list-item
-        +iconed-icon({
-          iconPath: 'services-icon/serv-1',
-          iconW: '80',
-          iconH: '80',
+    ul.main-list
+      li.main-list__item
+        +illustrated-item({
+          img: 'illustrations/services/1.svg',
+          imgW: '400',
+          imgH: '280',
 
+          cls: 'illustrated-item--rtl',
           title: 'Продажа и продление лицензий',
           text: 'Мы проанализируем ваши задачи и подберем для вас оптимальный тариф Битрикс24 без необходимости переплачивать за неиспользуемые опции.'
         })
 
-      li.services__list-item
-        +iconed-icon({
-          iconPath: 'services-icon/serv-2',
-          iconW: '80',
-          iconH: '80',
+      li.main-list__item
+        +illustrated-item({
+          img: 'illustrations/services/2.svg',
+          imgW: '400',
+          imgH: '280',
 
           title: 'Интеграции и разработка приложений',
           text: 'Битрикс24 интегрируется с различными системами для создания единой среды взаимодействия разных отделов внутри компании.'
         })
 
-      li.services__list-item
-        +iconed-icon({
-          iconPath: 'services-icon/serv-3',
-          iconW: '80',
-          iconH: '80',
+      li.main-list__item
+        +illustrated-item({
+          img: 'illustrations/services/3.svg',
+          imgW: '400',
+          imgH: '280',
 
+          cls: 'illustrated-item--rtl',
           title: 'Внедрение БИТРИКС24 “под ключ”',
           text: 'Данная услуга включает в себя весь комплекс работ: аудит бизнес-процессов, разработку технического задания, запуск системы и обучение сотрудников.'
         })
 
-      li.services__list-item
-        +iconed-icon({
-          iconPath: 'services-icon/serv-4',
-          iconW: '80',
-          iconH: '80',
+      li.main-list__item
+        +illustrated-item({
+          img: 'illustrations/services/4.svg',
+          imgW: '400',
+          imgH: '280',
 
           title: 'Обучение БИТРИКС24',
           text: 'Важно не только выполнить внедрение Битрикс24, но и провести качественное обучение сотрудников компании заказчика.'
         })
 
-      li.services__list-item
-        +iconed-icon({
-          iconPath: 'services-icon/serv-5',
-          iconW: '80',
-          iconH: '80',
+      li.main-list__item
+        +illustrated-item({
+          img: 'illustrations/services/5.svg',
+          imgW: '400',
+          imgH: '280',
 
+          cls: 'illustrated-item--rtl',
           title: 'Внедрение коробочной версии',
           text: 'Для компаний, которые предпочитают хранить данные на своих серверах, мы предлагаем внедрение коробочной версии Битрикс24.'
         })
 
-      li.services__list-item
-        +iconed-icon({
-          iconPath: 'services-icon/serv-6',
-          iconW: '80',
-          iconH: '80',
+      li.main-list__item
+        +illustrated-item({
+          img: 'illustrations/services/6.svg',
+          imgW: '400',
+          imgH: '280',
 
           title: 'Техническая поддержка БИТРИКС24',
           text: 'Два раза в год команда Битрикс24 выпускает обновления, совершенствуя продукт, которые дают возможность запускать новые сценарии работы с системой.'
         })
 
-      li.services__list-item
-        +iconed-icon({
-          iconPath: 'services-icon/serv-7',
-          iconW: '80',
-          iconH: '80',
+      li.main-list__item
+        +illustrated-item({
+          img: 'illustrations/services/7.svg',
+          imgW: '400',
+          imgH: '280',
 
+          cls: 'illustrated-item--rtl',
           title: 'Отраслевые решения БИТРИКС24',
           text: 'Мы разработали несколько типовых решений для некоторых отраслей бизнеса: ремонт квартир, установка окон, монтаж потолков.'
         })
 
-      li.services__list-item
-        +iconed-icon({
-          iconPath: 'services-icon/serv-8',
-          iconW: '80',
-          iconH: '80',
+      li.main-list__item
+        +illustrated-item({
+          img: 'illustrations/services/8.svg',
+          imgW: '400',
+          imgH: '280',
 
           title: 'Разработка бизнес-процессов',
           text: 'Битрикс24 позволяет автоматизировать как рутинные операции, так и сложные производственные процессы для оптимизации рабочих ресурсов.'

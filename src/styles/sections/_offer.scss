@@ -1,0 +1,61 @@
+.offer {
+
+  .lw-section-title {
+    display: inline-block;
+    margin-bottom: 50px;
+    color: var(--white);
+    width: 60%;
+    max-width: 960px;
+    text-align: left;
+
+    @include m-b-desktop-down {
+      margin-bottom: 30px;
+    }
+
+    @include m-b-down(960px) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__container {
+    position: relative;
+    padding: 30px 150px;
+
+    @include m-b-down(1280px) {
+      padding: 30px 100px;
+    }
+
+    @include m-b-laptop-down {
+      padding: 30px 50px;
+    }
+
+    @include m-b-down(960px) {
+      padding: 0 15px;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -20px;
+      right: -0;
+
+      content: '';
+      width: 40%;
+      max-width: 750px;
+      height: 720px;
+      background-repeat: no-repeat;
+      background-image: url("../assets/img/offer-form-bg.png");
+      background-size: contain;
+      background-position: center;
+
+      @include m-b-desktop-down {
+        background-position: center 80%;
+      }
+
+      @include m-b-down(960px) {
+        display: none;
+        right: 0;
+      }
+    }
+  }
+}

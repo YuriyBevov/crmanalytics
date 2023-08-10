@@ -94,3 +94,13 @@
     }
   }
 }
+
+/*common classes*/
+.main-list {
+  @extend .list-reset;
+  margin-bottom: 40px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

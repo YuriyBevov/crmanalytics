@@ -1,7 +1,8 @@
 include ../../mixins/bitrix-contain-title
 include ../../mixins/main-btn
-include ../../mixins/iconed-icon
+//include ../../mixins/iconed-icon
 include ../../mixins/case-card
+include ../../mixins/illustrated-item
 
 section.lw-section.features
   .lw-container.lw-section-column-container
@@ -13,36 +14,43 @@ section.lw-section.features
 
     ul.features__list
       li.features__list-item
-        +iconed-icon({
-          iconPath: 'features-icon/retail-icon',
-          iconW: '80',
-          iconH: '80',
+        +illustrated-item({
+          img: 'illustrations/features/1.svg',
+          imgW: '300',
+          imgH: '300',
 
-          title: 'Опт и розница'
+          cls: 'illustrated-item--column',
+          title: 'Опт и розница',
         })
-      li.features__list-item
-        +iconed-icon({
-          iconPath: 'features-icon/tender-icon',
-          iconW: '80',
-          iconH: '80',
 
-          title: 'Тендеры'
+      li.features__list-item
+        +illustrated-item({
+          img: 'illustrations/features/2.svg',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'Тендеры',
         })
-      li.features__list-item
-        +iconed-icon({
-          iconPath: 'features-icon/hr-icon',
-          iconW: '80',
-          iconH: '80',
 
-          title: 'HR-аналитика'
+      li.features__list-item
+        +illustrated-item({
+          img: 'illustrations/features/3.svg',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'HR-аналитика',
         })
-      li.features__list-item
-        +iconed-icon({
-          iconPath: 'features-icon/prod-icon',
-          iconW: '80',
-          iconH: '80',
 
-          title: 'Производственные компании'
+      li.features__list-item
+        +illustrated-item({
+          img: 'illustrations/features/4.svg',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'Производственные <br> компании',
         })
 
     .main-slider-container

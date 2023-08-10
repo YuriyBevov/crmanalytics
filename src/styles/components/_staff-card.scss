@@ -66,6 +66,10 @@
     @include m-b-tablet-down {
       text-align: center;
     }
+
+    @include m-b-mobile-lg-down {
+      font-size: 14px;
+    }
   }
 
   .lw-base-text {
