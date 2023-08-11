@@ -18,6 +18,7 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
+
   //min-height: fill-available;
   //min-height: -webkit-fill-available;
   //-webkit-text-size-adjust: none;
@@ -35,6 +36,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  will-change: scroll-position;
 
   &.body-locked {
     overflow: hidden;

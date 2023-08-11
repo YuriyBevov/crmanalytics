@@ -1289,6 +1289,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  will-change: scroll-position;
 }
 body.body-locked {
   overflow: hidden;
