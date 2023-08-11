@@ -1,0 +1,12 @@
+.price-card-list {
+  @extend .list-reset;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+  width: 100%;
+
+  @include m-b-laptop-down {
+    grid-template-columns: 1fr;
+  }
+}

@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+    width: 100%;
 
     @include m-b-down(960px) {
       grid-template-columns: repeat(2, 1fr);

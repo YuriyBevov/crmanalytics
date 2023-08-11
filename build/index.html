@@ -11,21 +11,7 @@
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="lw-container header__container"><a class="main-logo" href="index.html"><img src="./assets/img/logo.svg" alt="crmanalytics.ru - Внедрение и настройка CRM Битрикс24" width="160" height="50"></a>
-        <nav class="main-nav active">
-          <ul class="main-nav__list">
-            <li class="main-nav__list-item"><a href="#">Главная</a></li>
-            <li class="main-nav__list-item"><a href="#">Сферы деятельности</a></li>
-            <li class="main-nav__list-item"><a href="#">Наши услуги</a></li>
-            <li class="main-nav__list-item"><a href="#">Цены</a></li>
-            <li class="main-nav__list-item"><a href="#">О нас</a></li>
-            <li class="main-nav__list-item"><a href="#">Контакты</a></li>
-          </ul>
-          <button class="burger" type="button" aria-label="Кнопка открытия/закрытия меню"><span class="burger__line burger__line--top" aria-hidden="true"></span><span class="burger__line burger__line--middle" aria-hidden="true"></span><span class="burger__line burger__line--bottom" aria-hidden="true"></span></button>
-        </nav>
-      </div>
-    </header>
+    <!--include ./main-header-->
     <main>
       <section class="lw-section hero">
         <div class="lw-container hero__container">
@@ -97,6 +83,74 @@
             </li>
           </ul>
                 <button class="lw-main-btn" type="button">Получить предложение по услугам</button>
+        </div>
+      </section>
+      <section class="lw-section lw-skew-section">
+        <div class="lw-container lw-skew-section-container">
+                <h2 class="lw-section-title"><span>Стоимость внедрения</span><span class="bitrix-logo">&thinsp;Битрикс<span>24</span>&thinsp;</span>
+                </h2>
+          <ul class="price-card-list">
+            <li class="price-card-list__item">
+                    <div class="price-card price-card--dark">
+                      <div class="price-card__header"><span class="price-card__title">Почасовая ставка</span><span class="price-card__desc">Точечные настройки</span>
+                      </div>
+                      <div class="price-card__body">
+                        <div class="price-block"><span><span class="price-block__value">3 000</span>руб./час</span></div>
+                        <ul>
+                          <li><span>Любые работы по Битрикс24</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="price-card__footer">
+                              <button class="lw-main-btn" type="button">Заказать сейчас</button>
+                      </div>
+                    </div>
+            </li>
+            <li class="price-card-list__item">
+                    <div class="price-card">
+                      <div class="price-card__header"><span class="price-card__title">Внедрение под ключ</span><span class="price-card__desc">Комплексное внедрение</span>
+                      </div>
+                      <div class="price-card__body">
+                        <div class="price-block"><span>от<span class="price-block__value">180 000</span>руб.</span></div>
+                        <ul>
+                          <li><span>Аудит бизнес-процессов</span>
+                          </li>
+                          <li><span>Создание карты проекта</span>
+                          </li>
+                          <li><span>Разработка технического задания</span>
+                          </li>
+                          <li><span>Разработка воронок продаж</span>
+                          </li>
+                          <li><span>Интеграция каналов коммуникаций</span>
+                          </li>
+                          <li><span>Подключение сквозной аналитики</span>
+                          </li>
+                          <li><span>Обучение сотрудников с записью</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="price-card__footer">
+                              <button class="lw-main-btn" type="button">Заказать сейчас</button>
+                      </div>
+                    </div>
+            </li>
+            <li class="price-card-list__item">
+                    <div class="price-card price-card--dark">
+                      <div class="price-card__header"><span class="price-card__title">Техническая поддержка</span><span class="price-card__desc">Фиксированная цена и сроки</span>
+                      </div>
+                      <div class="price-card__body">
+                        <div class="price-block"><span>от<span class="price-block__value">49 900</span>руб.</span></div>
+                        <ul>
+                          <li><span>Любые работы по Битрикс24</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="price-card__footer">
+                              <button class="lw-main-btn" type="button">Выбрать пакет</button>
+                      </div>
+                    </div>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="lw-section">
@@ -357,17 +411,6 @@
           </ul>
         </div>
       </section>
-      <!--include ../sections/index-page/features-->
-      <!--include ../sections/index-page/services-->
-      <!--include ../sections/index-page/prices-->
-      <!--include ../sections/index-page/about-->
-      <!--include ../sections/index-page/staff-->
-      <!--include ../sections/index-page/workflow-->
-      <!--include ../sections/index-page/results-->
-      <!--include ../sections/index-page/clients-->
-      <!--include ../sections/index-page/licenses-->
-      <!--include ../sections/common/offer-->
-      <!--include ../sections/index-page/contacts-->
     </main>
     <footer>
       <p>footer</p>

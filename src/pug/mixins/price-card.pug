@@ -1,0 +1,62 @@
+//-
+  +price-card({
+    title: String,
+    desc: String,
+    priceBefore: String,
+    price: Number,
+    priceAfter: String
+    list: [
+      {
+        title: String,
+        isIconed: Boolean
+        isEnabled: Boolean,
+      }
+    ],
+    cls: ['price-card--dark']
+    btnText: String
+  })
+
+include ./main-btn
+
+mixin price-card(data)
+  .price-card( class= data.cls ? data.cls : null )
+    .price-card__header
+      span.price-card__title!= data.title
+      if data.desc
+        span.price-card__desc!= data.desc
+
+    .price-card__body
+      .price-block
+        span
+          if data.price.priceFrom
+            | от
+          span.price-block__value
+            if data.priceOld
+              small 396 000
+            != data.price.value
+          != data.price.priceDesc
+
+      ul
+        each item in data.list
+          li
+            if item.isIconed
+              if item.isDisabled
+                svg(width="16" height="16" style="fill: var(--danger);")
+                  use(xlink:href="./assets/sprite.svg#icon-cross")
+              else
+                svg(width="28" height="28" style="fill: var(--success);")
+                  use(xlink:href="./assets/sprite.svg#icon-check")
+            span!= item.title
+
+    .price-card__footer
+      +main-btn({
+        tag: 'button',
+        type: 'button',
+        btnText: data.btnText
+      })
+
+
+
+
+
+

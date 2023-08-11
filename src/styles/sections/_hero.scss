@@ -5,13 +5,10 @@
   height: fit-content;
   min-height: 675px;
   padding-top: 290px;
-  //padding-bottom: 0;
-
   margin-top: -175px;
-  border-bottom: 32px solid var(--danger);
   transform: skew(0, -4deg);
   margin-bottom: 60px;
-
+  border-bottom: 32px solid var(--danger);
   background-color: var(--primary);
   background: linear-gradient(226.59deg, #172755 24.26%, #2F4DA5 117.16%);
 
@@ -34,15 +31,9 @@
     padding-top: 50px;
     padding-bottom: 50px;
 
-    /*@include m-b-laptop-down {
-      padding-top: 75px;
-      padding-bottom: 75px;
-    }*/
-
     @include m-b-tablet-down {
       padding-top: 50px;
       padding-bottom: 50px;
     }
-
   }
 }

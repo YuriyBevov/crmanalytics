@@ -1,0 +1,151 @@
+.price-card {
+  @extend .flex-column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  border-radius: 30px;
+  padding: 40px 30px;
+
+  @include m-b-laptop-down {
+    padding: 30px 20px;
+  }
+
+  background-color: var(--white);
+
+  &__header,
+  &__body,
+  &__footer {
+    width: 100%;
+  }
+
+  &__header {
+    @extend .flex-column;
+    text-align: center;
+    border-bottom: 1px solid #2a407c;
+  }
+
+  &__body {
+    margin-bottom: 30px;
+
+    @include m-b-laptop-down {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      @extend .list-reset;
+      margin-bottom: 10px;
+      li {
+        @extend .flex-centered-content;
+        font-family: var(--secondary-color);
+        font-size: 16px;
+        padding: 5px;
+        color: var(--primary);
+
+        @include m-b-laptop-down {
+          font-size: 14px;
+        }
+        svg {
+          margin-right: 8px;
+        }
+
+        span {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    @extend .flex-column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--price-block-main-color);
+
+    @include m-b-laptop-down {
+      font-size: 20px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 18px;
+    }
+  }
+
+  &__desc {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: var(--primary);
+
+    @include m-b-laptop-down {
+      font-size: 16px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 14px;
+    }
+  }
+}
+
+.price-card--dark {
+  background-color: rgba(15,31,75, .7);
+  box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.20);
+
+  .price-card__title,
+  .price-card__desc,
+  .price-card__body li,
+  .price-block {
+    color: var(--white);
+  }
+}
+
+.price-block {
+  @extend .flex-column;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #2a407c;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--price-block-main-color);
+
+  @include m-b-laptop-down {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  span {
+    display: flex;
+    align-items: baseline;
+    line-height: 1;
+  }
+
+  &__value {
+    font-size: 30px;
+    padding: 0 5px;
+    color: var(--danger);
+
+    @include m-b-laptop-down {
+      font-size: 24px;
+    }
+
+    small {
+      font-size: 12px;
+      text-decoration: line-through;
+      color: var(--info);
+      padding-right: 5px;
+    }
+  }
+}
+
+

@@ -1,3 +1,11 @@
+//-
+  +main-btn({
+      tag: any HTML TAG,
+      type: ['button'],
+      url: String,
+      cls: String,
+      btnText: String
+    })
 mixin main-btn(data)
   #{data.tag}(href= data.url ? data.url : null type= data.type ? data.type : null class= data.cls ? data.cls : null).lw-main-btn!= data.btnText
 

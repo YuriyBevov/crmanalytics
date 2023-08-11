@@ -1,8 +1,83 @@
 include ../../mixins/bitrix-contain-title
+include ../../mixins/price-card
 
-section.lw-section
-  .lw-container
+section.lw-section.lw-skew-section
+  .lw-container.lw-skew-section-container
     +bitrix-contain-title({
       tag: 'h2',
       prolog: 'Стоимость внедрения',
     })
+
+    ul.price-card-list
+      li.price-card-list__item
+        +price-card({
+          cls: 'price-card--dark',
+          title: 'Почасовая ставка',
+          desc: 'Точечные настройки',
+          price: {
+            value: '3 000',
+            priceDesc: 'руб./час',
+          },
+          list: [
+            {
+              title: 'Любые работы по Битрикс24',
+            }
+          ],
+
+          btnText: 'Заказать сейчас'
+        })
+
+      li.price-card-list__item
+        +price-card({
+          title: 'Внедрение под ключ',
+          desc: 'Комплексное внедрение',
+          price: {
+            priceFrom: true,
+            value: '180 000',
+            priceDesc: 'руб.',
+          },
+          list: [
+            {
+              title: 'Аудит бизнес-процессов',
+            },
+            {
+              title: 'Создание карты проекта',
+            },
+            {
+              title: 'Разработка технического задания',
+            },
+            {
+              title: 'Разработка воронок продаж',
+            },
+            {
+              title: 'Интеграция каналов коммуникаций',
+            },
+            {
+              title: 'Подключение сквозной аналитики',
+            },
+            {
+              title: 'Обучение сотрудников с записью',
+            }
+          ],
+
+          btnText: 'Заказать сейчас'
+        })
+
+      li.price-card-list__item
+        +price-card({
+          cls: 'price-card--dark',
+          title: 'Техническая поддержка',
+          desc: 'Фиксированная цена и сроки',
+          price: {
+            priceFrom: true,
+            value: '49 900',
+            priceDesc: 'руб.',
+          },
+          list: [
+            {
+              title: 'Любые работы по Битрикс24',
+            }
+          ],
+
+          btnText: 'Выбрать пакет'
+        })
