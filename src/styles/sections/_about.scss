@@ -1,13 +1,42 @@
 .about {
+
+  &__container {
+    max-width: 1240px;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    max-width: 1240px;
-    margin: 0 auto;
+    margin-bottom: 50px;
 
     @include m-b-tablet-down {
       grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 500px 2fr;
+    grid-gap: 20px;
+    align-items: center;
+
+    /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+    @include m-b-down(960px) {
+      grid-template-columns: 300px 2fr;
+    }
+
+    &-img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
+    &-text {
+      padding-right: 20px;
+      p:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

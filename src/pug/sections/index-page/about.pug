@@ -1,14 +1,15 @@
 include ../../mixins/bitrix-contain-title
+include ../../mixins/blockquote
 
-section.lw-section
-  .lw-container
+section.lw-section.about
+  .lw-container.about__container
     +bitrix-contain-title({
       tag: 'h2',
       prolog: 'О нас',
       bitrixLogoExcluded: true
     })
 
-    div.about__list
+    .about__list
       .about-item
         .about-item__header
           span.about-item__header-value 7
@@ -35,6 +36,25 @@ section.lw-section
             span.lw-title-sm.lw-accent-color проектов
 
         p.lw-base-text Каждый 2-й клиент остается снами на постоянное сотрудничество.
+
+    .about__content
+      img(src="./assets/img/about-content-img.png" alt="О нас" width="500" height="330").about__content-img
+
+      .about__content-text
+        p.lw-base-text Мы - команда с широкими взглядами: руководитель проекта, бизнес-аналитики, технические специалисты, менеджеры по внедрению.
+        p.lw-base-text Каждый сотрудник компании отвечает за задачи из своей зоны ответственности. Работаем с 2016 года.
+        p.lw-base-text За 5 лет мы помогли 300 компаниям получить новый опыт и знания в области внедрения CRM-систем.
+        p.lw-base-text Компания является Золотым сертифицированным партнером Битрикс24 и входит в рейтинг лучших в Санкт-Петербурге.
+
+
+    +blockquote({
+      content: [
+        'Гарантия результата внедрения и сопровождения информационных систем за счет системного подхода при постановке и решении задач.',
+        'Для себя мы решили, что качество сервиса, положительный опыт работы с ним, а значит — и лояльность клиентов, напрямую зависят от внимания к деталям. Для этого подход к работе должен быть безупречным и работать четко, как швейцарские часы.'
+      ]
+    })
+
+
 
 
 

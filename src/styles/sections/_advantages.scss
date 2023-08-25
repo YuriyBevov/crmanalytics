@@ -1,0 +1,25 @@
+.advantages {
+
+  &__list {
+    @extend .list-reset;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  &__desc {
+    max-width: 1200px;
+    text-align: center;
+  }
+
+  .illustrated-item {
+    height: 100%;
+    outline: 1px solid red;
+  }
+
+  .illustrated-item__content .lw-title-sm,
+  .illustrated-item__content .lw-base-text {
+    text-align: center;
+  }
+}

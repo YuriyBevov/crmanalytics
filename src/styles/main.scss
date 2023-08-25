@@ -11,6 +11,7 @@
 @import "./layout/header";
 
 /* Компоненты */
+@import "./components/blockquote";
 @import "./components/main-logo";
 @import "./components/bitrix-logo";
 @import "./components/main-nav";
@@ -28,6 +29,7 @@
 
 /* Секции */
 @import "./sections/hero";
+@import "./sections/advantages";
 @import "./sections/features";
 @import "./sections/services";
 @import "./sections/skew-section";

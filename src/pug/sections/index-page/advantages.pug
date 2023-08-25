@@ -1,0 +1,47 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/illustrated-item
+
+section.lw-section.advantages
+  .lw-container.lw-section-column-container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Наши преимущества',
+      bitrixLogoExcluded: true
+    })
+
+    p.lw-base-text.advantages__desc Внедрить CRM – значит облегчить жизнь и владельцу бизнеса, и управляющему этим бизнесом, и работникам предприятия, и клиентам компании. Правильная автоматизация процессов повышает эффективность работы любой компании.
+
+    ul.advantages__list
+      li.advantages__list-item
+        +illustrated-item({
+          img: 'advantages/1.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'КОНТРОЛЬ ВСЕХ ВХОДЯЩИХ ОБРАЩЕНИЙ',
+          text: 'Битрикс24 объединяет все коммуникации в одном окне, напоминает о просроченных делах и задачах.'
+        })
+
+      li.advantages__list-item
+        +illustrated-item({
+          img: 'advantages/2.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'АВТОМАТИЗИРОВАННЫЕ ПРОЦЕССЫ ПРОДАЖ',
+          text: 'Битрикс24 полностью автоматизирует процесс взаимодействия с заказчиком: от первого контакта до подписания закрывающих документов.'
+        })
+
+      li.advantages__list-item
+        +illustrated-item({
+          img: 'advantages/3.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'АНАЛИТИКА И ОТЧЕТЫ компании',
+          text: 'Не понимаете, как работает компания в цифрах ? Сколько сделок удалось и провалено - все показатели доступны в разделе CRM-аналитики Битрикс24.'
+        })
+
