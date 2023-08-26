@@ -7,6 +7,10 @@
   border-bottom: 1px solid var( --secondary);
   max-width: 1400px;
 
+  @include m-b-mobile-lg-down {
+    padding: 20px 10px;
+  }
+
   p {
     max-width: 1080px;
     font-weight: 600;
@@ -26,6 +30,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../assets/img/blockquote-icon.png");
+
+    @include m-b-mobile-lg-down {
+      display: none;
+    }
   }
 
   &::before {

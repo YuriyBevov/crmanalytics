@@ -1,0 +1,11 @@
+mixin expanded-list(data)
+  .expanded-list
+    each item in data
+      .expanded-list__item
+        .expanded-list__item-header
+          span.lw-title-sm!= item.question
+          svg(width="32" height="32")
+            use(xlink:href="./assets/sprite.svg#icon-plus")
+        .expanded-list__item-body
+          each answer in item.answers
+            p.lw-base-text!= answer

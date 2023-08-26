@@ -1,0 +1,36 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/expanded-list
+
+section.lw-section
+  .lw-container.lw-section-column-container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Вопросы и ответы',
+      bitrixLogoExcluded: true
+    })
+
+    +expanded-list([
+      {
+        question: 'У БИТРИКС24 ЕСТЬ БЕСПЛАТНЫЙ ТАРИФ?',
+        answers: [
+          'lorem ipsum',
+          'lorem ipsum dolor',
+          'Да, Вы можете обратиться к нашему менеджеру, он подготовит для вас индивидуальное предложение.'
+        ]
+      },
+
+      {
+        question: 'Возможны индивидуальные условия сотрудничества?',
+        answers: [
+          'Да, Вы можете обратиться к нашему менеджеру, он подготовит для вас индивидуальное предложение.'
+        ]
+      },
+
+      {
+        question: 'В ЧЕМ ОТЛИЧИЕ ОБЛАЧНЫХ И КОРОБОЧНЫХ РЕДАКЦИЙ?',
+        answers: [
+          'Да, Вы можете обратиться к нашему менеджеру, он подготовит для вас индивидуальное предложение.'
+        ]
+      },
+    ])
+

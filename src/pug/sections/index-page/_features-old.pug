@@ -1,0 +1,85 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/main-btn
+include ../../mixins/case-card
+include ../../mixins/illustrated-item
+
+section.lw-section
+  .lw-container.lw-section-column-container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Мы специализируемся на',
+      epilog: '<br>и&nbsp;уже увеличили продажи в&nbsp;этих отраслях'
+    })
+
+    ul.features__list
+      li.features__list-item
+        +illustrated-item({
+          img: 'illustrations/features/1.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'Опт и розница',
+        })
+
+      li.features__list-item
+        +illustrated-item({
+          img: 'illustrations/features/2.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'Тендеры',
+        })
+
+      li.features__list-item
+        +illustrated-item({
+          img: 'illustrations/features/3.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'HR-аналитика',
+        })
+
+      li.features__list-item
+        +illustrated-item({
+          img: 'illustrations/features/4.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: 'illustrated-item--column',
+          title: 'Производственные <br> компании',
+        })
+
+    .main-slider-container
+      .swiper.main-slider.case-slider
+        .swiper-wrapper
+          .swiper-slide
+            +case-card({
+              img: 'case-card.jpg',
+              title: 'Внедрение БИТРИКС24 в компанию сферы услуг',
+              text: 'Внедрение Битрикс24 для компании ООО "Строй-Эксперт Консалт"'
+            })
+          .swiper-slide
+            +case-card({
+              img: 'case-card.jpg',
+              title: 'Внедрение БИТРИКС24 в компанию сферы услуг',
+              text: 'Внедрение Битрикс24 для компании ООО "Строй-Эксперт Консалт"'
+            })
+          .swiper-slide
+            +case-card({
+              img: 'case-card.jpg',
+              title: 'Внедрение БИТРИКС24 в компанию сферы услуг',
+              text: 'Внедрение Битрикс24 для компании ООО "Строй-Эксперт Консалт"'
+            })
+
+      .swiper-button-prev
+      .swiper-button-next
+
+    //+main-btn({
+      tag: 'button',
+      type: 'button',
+      cls: '',
+      btnText: 'Получить кейсы на почту'
+      })

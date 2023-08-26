@@ -1,23 +1,22 @@
-.features {
-  &__list {
-    @extend .main-list;
+.features-list {
+  @extend .main-list;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 100%;
 
-    @include m-b-down(960px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include m-b-mobile-lg-down {
-      grid-template-columns: 1fr;
-      grid-gap: 0;
-    }
+  @include m-b-down(960px) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
   }
 
-  &__list-item {
+  @include m-b-mobile-lg-down {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+
+  &__item {
     height: 100%;
 
     img {
