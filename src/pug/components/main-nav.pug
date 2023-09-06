@@ -1,22 +1,37 @@
-nav.main-nav.active
+nav.main-nav
+  .main-nav__container
+    .main-nav__header
+      include ../components/main-logo
+      include ../components/main-nav-closer
+    ul.main-nav__list
+      li.main-nav__list-item
+        a(href="#") Главная
 
-  ul.main-nav__list
-    li.main-nav__list-item
-      a(href="#") Главная
+      li.main-nav__list-item
+        a(href="#") О СИСТЕМЕ
 
-    li.main-nav__list-item
-      a(href="#") Сферы деятельности
+      li.main-nav__list-item
+        a(href="#") КОРОБОЧНАЯ ВЕРСИЯ
 
-    li.main-nav__list-item
-      a(href="#") Наши услуги
+      li.main-nav__list-item
+        a(href="#") ПРОДАЖА И ПРОДЛЕНИЕ ЛИЦЕНЗИЙ
 
-    li.main-nav__list-item
-      a(href="#") Цены
+      li.main-nav__list-item
+        a(href="#") ИНТЕГРАЦИЯ WhatsApp с БИТРИКС24
 
-    li.main-nav__list-item
-      a(href="#") О нас
+      li.main-nav__list-item
+        a(href="#") Контакты
 
-    li.main-nav__list-item
-      a(href="#") Контакты
+    .main-nav__contacts
+      a(href="mailto:hello@crmanalytics.ru") hello@crmanalytics.ru
+      a(href="tel:+79219260260") +7 921 926 02 60
 
-  include ./burger
+    .main-nav__social
+      a(href="#" rel="noopener nofollow norefferer")
+        svg(width="24" height="24")
+          use(xlink:href="./assets/sprite.svg#icon-tg")
+      a(href="#" rel="noopener nofollow norefferer")
+        svg(width="24" height="24")
+          use(xlink:href="./assets/sprite.svg#icon-whatsapp")
+
+

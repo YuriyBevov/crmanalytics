@@ -1,0 +1,56 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/illustrated-item
+
+section.lw-section.relationship
+  .lw-container.lw-section-column-container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Почему выберают нас',
+      bitrixLogoExcluded: true
+    })
+
+    ul.relationship__list
+      li.relationship__list-item
+        +illustrated-item({
+          img: '/illustrations/relationship/1.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: '',
+          title: 'Всегда на связи',
+          text: 'Мы не бросаем наших клиентов после настройки CRM и с радостью помогаем тем, кто ранее работал с другими партнерами. Не делим клиентов по статусам. Одинаково трудолюбиво выполняем все задачи.'
+        })
+
+      li.relationship__list-item
+        +illustrated-item({
+          img: '/illustrations/relationship/2.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: '',
+          title: 'КАЧЕСТВО РАБОТЫ',
+          text: 'Мы гарантируем решение вопроса. Ищем и предлагаем способы решения альтернативными методами. Заявка принята — значит мы взяли на себя обязательство по выполнению проекта.'
+        })
+
+      li.relationship__list-item
+        +illustrated-item({
+          img: '/illustrations/relationship/3.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: '',
+          title: 'СКОРОСТЬ ОТВЕТА',
+          text: 'Мы понимаем, на сколько Вам важна правильная работа CRM-системы. Поэтому разработали внутренние регламенты технической поддержки с классификацией запросов, четкими сроками и ответственными сотрудниками.'
+        })
+
+      li.relationship__list-item
+        +illustrated-item({
+          img: '/illustrations/relationship/4.png',
+          imgW: '300',
+          imgH: '300',
+
+          cls: '',
+          title: 'ЭКСПЕРТНОСТЬ',
+          text: 'Наша компания является экспертом в области CRM Битрикс24. Благодаря комплексному подходу и четко слаженной работе, вы будете уверены, что работа на вашем портале Битрикс24 под надежным контролем.'
+        })
+

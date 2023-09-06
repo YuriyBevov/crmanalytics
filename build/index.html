@@ -11,7 +11,47 @@
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
-    <!--include ./main-header-->
+    <header class="header">
+      <div class="lw-container header__container"><a class="main-logo" href="index.html"><img src="./assets/img/logo.svg" alt="crmanalytics.ru - Внедрение и настройка CRM Битрикс24" width="160" height="50"></a>
+        <div class="header__info">
+          <div class="header__info-contacts"><a href="mailto:hello@crmanalytics.ru">hello@crmanalytics.ru</a><a href="tel:+79219260260">+7 921 926 02 60</a></div>
+          <div class="header__info-social"><a href="#" rel="noopener nofollow norefferer">
+              <svg width="18" height="18">
+                <use xlink:href="./assets/sprite.svg#icon-chat"></use>
+              </svg></a><a href="#" rel="noopener nofollow norefferer">
+              <svg width="18" height="18">
+                <use xlink:href="./assets/sprite.svg#icon-tg"></use>
+              </svg></a><a href="#" rel="noopener nofollow norefferer">
+              <svg width="18" height="18">
+                <use xlink:href="./assets/sprite.svg#icon-whatsapp"></use>
+              </svg></a></div>
+        </div>
+        <button class="main-nav-opener" type="button" aria-label="Кнопка открытия/закрытия меню"><span class="main-nav-opener__line main-nav-opener__line--top" aria-hidden="true"></span><span class="main-nav-opener__line main-nav-opener__line--middle" aria-hidden="true"></span><span class="main-nav-opener__line main-nav-opener__line--bottom" aria-hidden="true"></span></button>
+        <nav class="main-nav">
+          <div class="main-nav__container">
+            <div class="main-nav__header"><a class="main-logo" href="index.html"><img src="./assets/img/logo.svg" alt="crmanalytics.ru - Внедрение и настройка CRM Битрикс24" width="160" height="50"></a>
+              <button class="main-nav-closer" type="button" aria-label="Закрыть меню"><span class="main-nav-closer__line" aria-hidden="true"></span><span class="main-nav-closer__line" aria-hidden="true"></span></button>
+            </div>
+            <ul class="main-nav__list">
+              <li class="main-nav__list-item"><a href="#">Главная</a></li>
+              <li class="main-nav__list-item"><a href="#">О СИСТЕМЕ</a></li>
+              <li class="main-nav__list-item"><a href="#">КОРОБОЧНАЯ ВЕРСИЯ</a></li>
+              <li class="main-nav__list-item"><a href="#">ПРОДАЖА И ПРОДЛЕНИЕ ЛИЦЕНЗИЙ</a></li>
+              <li class="main-nav__list-item"><a href="#">ИНТЕГРАЦИЯ WhatsApp с БИТРИКС24</a></li>
+              <li class="main-nav__list-item"><a href="#">Контакты</a></li>
+            </ul>
+            <div class="main-nav__contacts"><a href="mailto:hello@crmanalytics.ru">hello@crmanalytics.ru</a><a href="tel:+79219260260">+7 921 926 02 60</a></div>
+            <div class="main-nav__social"><a href="#" rel="noopener nofollow norefferer">
+                <svg width="24" height="24">
+                  <use xlink:href="./assets/sprite.svg#icon-tg"></use>
+                </svg></a><a href="#" rel="noopener nofollow norefferer">
+                <svg width="24" height="24">
+                  <use xlink:href="./assets/sprite.svg#icon-whatsapp"></use>
+                </svg></a></div>
+          </div>
+        </nav>
+      </div>
+    </header>
     <main>
       <section class="lw-section hero">
         <div class="lw-container hero__container">
@@ -20,10 +60,29 @@
                 <button class="lw-main-btn" type="button">Заказать внедрение</button>
         </div>
       </section>
-      <!--Чем мы можем вам помочь - 1 час-->
+      <section class="lw-section features">
+        <div class="lw-container">
+          <div class="features__grid">
+            <div class="features__grid-item">
+                    <h2 class="lw-section-title"><span>Чем мы можем вам помочь</span>
+                    </h2>
+              <ul class="features__list">
+                <li class="features__list-item lw-base-text">Продвину лучше и дешевле, чем в агентстве</li>
+                <li class="features__list-item lw-base-text">Предоставлю оперативную связь и быстрый результат</li>
+                <li class="features__list-item lw-base-text">Подберу индивидуальный подход в сотрудничестве</li>
+                <li class="features__list-item lw-base-text">Проведу предварительную консультацию</li>
+                <li class="features__list-item lw-base-text">Расскажу, как улучшить сайт до начала работ</li>
+                <li class="features__list-item lw-base-text">Помогу выбрать стратегию SEO-продвижения</li>
+              </ul>
+                    <a class="lw-main-btn">Заказать внедрение</a>
+            </div>
+            <div class="features__grid-item"><img src="./assets/img/feature-section-bg.png" alt="Сертификат партнера" width="700" height="440"></div>
+          </div>
+        </div>
+      </section>
       <section class="lw-section about">
         <div class="lw-container about__container">
-                <h2 class="lw-section-title"><span>О нас</span>
+                <h2 class="lw-section-title"><span>О компании <span class="lw-accent-color">Crm</span>Analytics</span>
                 </h2>
           <div class="about__list">
             <div class="about-item">
@@ -96,21 +155,21 @@
           <p class="lw-base-text advantages__desc">Внедрить CRM – значит облегчить жизнь и владельцу бизнеса, и управляющему этим бизнесом, и работникам предприятия, и клиентам компании. Правильная автоматизация процессов повышает эффективность работы любой компании.</p>
           <ul class="advantages__list">
             <li class="advantages__list-item">
-                    <div class="illustrated-item illustrated-item--column"><img src="./assets/img/advantages/1.png" alt="КОНТРОЛЬ ВСЕХ ВХОДЯЩИХ ОБРАЩЕНИЙ" width="300" height="300">
+                    <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/advantages/1.png" alt="КОНТРОЛЬ ВСЕХ ВХОДЯЩИХ ОБРАЩЕНИЙ" width="300" height="300">
                       <div class="illustrated-item__content"><span class="lw-title-sm">КОНТРОЛЬ ВСЕХ ВХОДЯЩИХ ОБРАЩЕНИЙ</span>
                         <p class="lw-base-text">Битрикс24 объединяет все коммуникации в одном окне, напоминает о просроченных делах и задачах.</p>
                       </div>
                     </div>
             </li>
             <li class="advantages__list-item">
-                    <div class="illustrated-item illustrated-item--column"><img src="./assets/img/advantages/2.png" alt="АВТОМАТИЗИРОВАННЫЕ ПРОЦЕССЫ ПРОДАЖ" width="300" height="300">
+                    <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/advantages/2.png" alt="АВТОМАТИЗИРОВАННЫЕ ПРОЦЕССЫ ПРОДАЖ" width="300" height="300">
                       <div class="illustrated-item__content"><span class="lw-title-sm">АВТОМАТИЗИРОВАННЫЕ ПРОЦЕССЫ ПРОДАЖ</span>
                         <p class="lw-base-text">Битрикс24 полностью автоматизирует процесс взаимодействия с заказчиком: от первого контакта до подписания закрывающих документов.</p>
                       </div>
                     </div>
             </li>
             <li class="advantages__list-item">
-                    <div class="illustrated-item illustrated-item--column"><img src="./assets/img/advantages/3.png" alt="АНАЛИТИКА И ОТЧЕТЫ компании" width="300" height="300">
+                    <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/advantages/3.png" alt="АНАЛИТИКА И ОТЧЕТЫ компании" width="300" height="300">
                       <div class="illustrated-item__content"><span class="lw-title-sm">АНАЛИТИКА И ОТЧЕТЫ компании</span>
                         <p class="lw-base-text">Не понимаете, как работает компания в цифрах ? Сколько сделок удалось и провалено - все показатели доступны в разделе CRM-аналитики Битрикс24.</p>
                       </div>
@@ -120,7 +179,64 @@
         </div>
       </section>
       <!--Наши кейсы - 2 часа-->
-      <!--Почему выбирают Битрикс24 - 1 час-->
+      <section class="lw-section comparing">
+        <div class="lw-container lw-section-column-container">
+                <h2 class="lw-section-title"><span>Почему выберают</span><span class="bitrix-logo">&thinsp;Битрикс<span>24</span>&thinsp;</span>
+                </h2>
+          <div class="lw-table-wrapper">
+            <table class="comparing__table">
+              <tr>
+                <td></td>
+                <td class="lw-base-text">БИТРИКС24</td>
+                <td class="lw-base-text">Мегаплан</td>
+                <td class="lw-base-text">1C CRM</td>
+              </tr>
+              <tr>
+                <td class="lw-base-text">Интеграция с любыми сайтами</td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
+              </tr>
+              <tr>
+                <td class="lw-base-text">Интеграция с любой IP-телефонией</td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
+              </tr>
+              <tr>
+                <td class="lw-base-text">Звонки прямо из CRM-системы</td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+              </tr>
+              <tr>
+                <td class="lw-base-text">Подходит для холодных звонков</td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
+              </tr>
+              <tr>
+                <td class="lw-base-text">Интеграция с почтой</td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
+              </tr>
+              <tr>
+                <td class="lw-base-text">Множественные воронки продаж</td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+              </tr>
+              <tr>
+                <td class="lw-base-text">Воронка продаж для постоянных покупателей (повторяющиеся абонентские платежи)</td>
+                <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
+                <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
       <section class="lw-section workflow">
         <div class="lw-container lw-section-column-container">
                 <h2 class="lw-section-title"><span>Как мы работаем</span>
@@ -161,35 +277,35 @@
                 </h2>
           <ul class="main-list">
             <li class="main-list__item">
-                    <div class="illustrated-item illustrated-item--rtl"><img src="./assets/img/illustrations/results/1.png" alt="Все клиенты под контролем" width="400" height="280">
+                    <div class="illustrated-item illustrated-item--rtl"><img rel="preload" src="./assets/img/illustrations/results/1.png" alt="Все клиенты под контролем" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Все клиенты под контролем</span>
                         <p class="lw-base-text">Все данные по вашим клиентам хранятся в единой структурированной базе, что позволяет легко находить нужную информацию, видеть всю историю взаимодействий, сегментировать клиентов, эффективно управлять сделками.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item"><img src="./assets/img/illustrations/results/2.png" alt="Объединены коммуникации" width="400" height="280">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img/illustrations/results/2.png" alt="Объединены коммуникации" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Объединены коммуникации</span>
                         <p class="lw-base-text">CRM система учитывает все коммуникации с клиентами, клиентская база пополняется автоматически из разных каналов связи: телефонии, электронной почты, заявок с сайта, социальных сетей, учетных программ.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item illustrated-item--rtl"><img src="./assets/img/illustrations/results/3.png" alt="Автоматизирована воронка продаж" width="400" height="280">
+                    <div class="illustrated-item illustrated-item--rtl"><img rel="preload" src="./assets/img/illustrations/results/3.png" alt="Автоматизирована воронка продаж" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Автоматизирована воронка продаж</span>
                         <p class="lw-base-text">CRM сама ведет клиента по воронке продаж: от холодного контакта до успешной сделки. Роботы CRM отправляют клиентам письма, sms, голосовые сообщения, показывают рекламу, ставят задания менеджерам.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item"><img src="./assets/img/illustrations/results/4.png" alt="Настроены аналитические отчеты" width="400" height="280">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img/illustrations/results/4.png" alt="Настроены аналитические отчеты" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Настроены аналитические отчеты</span>
                         <p class="lw-base-text">Благодаря настройке CRM вы сможете распределять план между сотрудниками, следить за нагрузкой на менеджеров и анализировать продажи. Следите за историей взаимодействий: кто, что и когда делал в CRM.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item illustrated-item--rtl"><img src="./assets/img/illustrations/results/5.png" alt="Повышен уровень клиентского сервиса" width="400" height="280">
+                    <div class="illustrated-item illustrated-item--rtl"><img rel="preload" src="./assets/img/illustrations/results/5.png" alt="Повышен уровень клиентского сервиса" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Повышен уровень клиентского сервиса</span>
                         <p class="lw-base-text">CRM помогает стандартизировать обслуживание клиентов для всех менеджеров, максимально снизить количество ошибочных и ненужных действий, повысить лояльность клиентов и, как следствие, улучшить финансовые показатели.</p>
                       </div>
@@ -204,25 +320,25 @@
                 </h2>
                 <ul class="features-list">
                   <div class="features-list__item">
-                          <div class="illustrated-item illustrated-item--column"><img src="./assets/img/illustrations/features/1.png" alt="Опт и розница" width="300" height="300">
+                          <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Опт и розница" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Опт и розница</span>
                             </div>
                           </div>
                   </div>
                   <div class="features-list__item">
-                          <div class="illustrated-item illustrated-item--column"><img src="./assets/img/illustrations/features/2.png" alt="Тендеры" width="300" height="300">
+                          <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/2.png" alt="Тендеры" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Тендеры</span>
                             </div>
                           </div>
                   </div>
                   <div class="features-list__item">
-                          <div class="illustrated-item illustrated-item--column"><img src="./assets/img/illustrations/features/3.png" alt="HR-аналитика" width="300" height="300">
+                          <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/3.png" alt="HR-аналитика" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">HR-аналитика</span>
                             </div>
                           </div>
                   </div>
                   <div class="features-list__item">
-                          <div class="illustrated-item illustrated-item--column"><img src="./assets/img/illustrations/features/4.png" alt="Производственные &lt;br&gt; компании" width="300" height="300">
+                          <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/4.png" alt="Производственные &lt;br&gt; компании" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Производственные <br> компании</span>
                             </div>
                           </div>
@@ -253,63 +369,98 @@
           </div>
         </div>
       </section>
-      <!-- Почему выбирают нас - 1 час-->
+      <section class="lw-section relationship">
+        <div class="lw-container lw-section-column-container">
+                <h2 class="lw-section-title"><span>Почему выберают нас</span>
+                </h2>
+          <ul class="relationship__list">
+            <li class="relationship__list-item">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img//illustrations/relationship/1.png" alt="Всегда на связи" width="300" height="300">
+                      <div class="illustrated-item__content"><span class="lw-title-sm">Всегда на связи</span>
+                        <p class="lw-base-text">Мы не бросаем наших клиентов после настройки CRM и с радостью помогаем тем, кто ранее работал с другими партнерами. Не делим клиентов по статусам. Одинаково трудолюбиво выполняем все задачи.</p>
+                      </div>
+                    </div>
+            </li>
+            <li class="relationship__list-item">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img//illustrations/relationship/2.png" alt="КАЧЕСТВО РАБОТЫ" width="300" height="300">
+                      <div class="illustrated-item__content"><span class="lw-title-sm">КАЧЕСТВО РАБОТЫ</span>
+                        <p class="lw-base-text">Мы гарантируем решение вопроса. Ищем и предлагаем способы решения альтернативными методами. Заявка принята — значит мы взяли на себя обязательство по выполнению проекта.</p>
+                      </div>
+                    </div>
+            </li>
+            <li class="relationship__list-item">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img//illustrations/relationship/3.png" alt="СКОРОСТЬ ОТВЕТА" width="300" height="300">
+                      <div class="illustrated-item__content"><span class="lw-title-sm">СКОРОСТЬ ОТВЕТА</span>
+                        <p class="lw-base-text">Мы понимаем, на сколько Вам важна правильная работа CRM-системы. Поэтому разработали внутренние регламенты технической поддержки с классификацией запросов, четкими сроками и ответственными сотрудниками.</p>
+                      </div>
+                    </div>
+            </li>
+            <li class="relationship__list-item">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img//illustrations/relationship/4.png" alt="ЭКСПЕРТНОСТЬ" width="300" height="300">
+                      <div class="illustrated-item__content"><span class="lw-title-sm">ЭКСПЕРТНОСТЬ</span>
+                        <p class="lw-base-text">Наша компания является экспертом в области CRM Битрикс24. Благодаря комплексному подходу и четко слаженной работе, вы будете уверены, что работа на вашем портале Битрикс24 под надежным контролем.</p>
+                      </div>
+                    </div>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section class="lw-section services">
         <div class="lw-container lw-section-column-container">
                 <h2 class="lw-section-title"><span>Наши услуги&nbsp;по</span><span class="bitrix-logo">&thinsp;Битрикс<span>24</span>&thinsp;</span>
                 </h2>
           <ul class="main-list">
             <li class="main-list__item">
-                    <div class="illustrated-item illustrated-item--rtl"><img src="./assets/img/illustrations/services/1.png" alt="Продажа и продление лицензий" width="400" height="280">
+                    <div class="illustrated-item illustrated-item--rtl"><img rel="preload" src="./assets/img/illustrations/services/1.png" alt="Продажа и продление лицензий" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Продажа и продление лицензий</span>
                         <p class="lw-base-text">Мы проанализируем ваши задачи и подберем для вас оптимальный тариф Битрикс24 без необходимости переплачивать за неиспользуемые опции.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item"><img src="./assets/img/illustrations/services/2.png" alt="Интеграции и разработка приложений" width="400" height="280">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img/illustrations/services/2.png" alt="Интеграции и разработка приложений" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Интеграции и разработка приложений</span>
                         <p class="lw-base-text">Битрикс24 интегрируется с различными системами для создания единой среды взаимодействия разных отделов внутри компании.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item illustrated-item--rtl"><img src="./assets/img/illustrations/services/3.png" alt="Внедрение БИТРИКС24 “под ключ”" width="400" height="280">
+                    <div class="illustrated-item illustrated-item--rtl"><img rel="preload" src="./assets/img/illustrations/services/3.png" alt="Внедрение БИТРИКС24 “под ключ”" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Внедрение БИТРИКС24 “под ключ”</span>
                         <p class="lw-base-text">Данная услуга включает в себя весь комплекс работ: аудит бизнес-процессов, разработку технического задания, запуск системы и обучение сотрудников.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item"><img src="./assets/img/illustrations/services/4.png" alt="Обучение БИТРИКС24" width="400" height="280">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img/illustrations/services/4.png" alt="Обучение БИТРИКС24" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Обучение БИТРИКС24</span>
                         <p class="lw-base-text">Важно не только выполнить внедрение Битрикс24, но и провести качественное обучение сотрудников компании заказчика.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item illustrated-item--rtl"><img src="./assets/img/illustrations/services/5.png" alt="Внедрение коробочной версии" width="400" height="280">
+                    <div class="illustrated-item illustrated-item--rtl"><img rel="preload" src="./assets/img/illustrations/services/5.png" alt="Внедрение коробочной версии" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Внедрение коробочной версии</span>
                         <p class="lw-base-text">Для компаний, которые предпочитают хранить данные на своих серверах, мы предлагаем внедрение коробочной версии Битрикс24.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item"><img src="./assets/img/illustrations/services/6.png" alt="Техническая поддержка БИТРИКС24" width="400" height="280">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img/illustrations/services/6.png" alt="Техническая поддержка БИТРИКС24" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Техническая поддержка БИТРИКС24</span>
                         <p class="lw-base-text">Два раза в год команда Битрикс24 выпускает обновления, совершенствуя продукт, которые дают возможность запускать новые сценарии работы с системой.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item illustrated-item--rtl"><img src="./assets/img/illustrations/services/7.png" alt="Отраслевые решения БИТРИКС24" width="400" height="280">
+                    <div class="illustrated-item illustrated-item--rtl"><img rel="preload" src="./assets/img/illustrations/services/7.png" alt="Отраслевые решения БИТРИКС24" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Отраслевые решения БИТРИКС24</span>
                         <p class="lw-base-text">Мы разработали несколько типовых решений для некоторых отраслей бизнеса: ремонт квартир, установка окон, монтаж потолков.</p>
                       </div>
                     </div>
             </li>
             <li class="main-list__item">
-                    <div class="illustrated-item"><img src="./assets/img/illustrations/services/8.png" alt="Разработка бизнес-процессов" width="400" height="280">
+                    <div class="illustrated-item"><img rel="preload" src="./assets/img/illustrations/services/8.png" alt="Разработка бизнес-процессов" width="400" height="280">
                       <div class="illustrated-item__content"><span class="lw-title-sm">Разработка бизнес-процессов</span>
                         <p class="lw-base-text">Битрикс24 позволяет автоматизировать как рутинные операции, так и сложные производственные процессы для оптимизации рабочих ресурсов.</p>
                       </div>
@@ -393,25 +544,25 @@
                 </h2>
                 <ul class="features-list">
                   <div class="features-list__item">
-                          <div class="illustrated-item illustrated-item--column"><img src="./assets/img/illustrations/features/1.png" alt="Отсутствие времени у руководителя" width="300" height="300">
+                          <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Отсутствие времени у руководителя" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Отсутствие времени у руководителя</span>
                             </div>
                           </div>
                   </div>
                   <div class="features-list__item">
-                          <div class="illustrated-item illustrated-item--column"><img src="./assets/img/illustrations/features/1.png" alt="Бюджет" width="300" height="300">
+                          <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Бюджет" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Бюджет</span>
                             </div>
                           </div>
                   </div>
                   <div class="features-list__item">
-                          <div class="illustrated-item illustrated-item--column"><img src="./assets/img/illustrations/features/1.png" alt="Еще что то" width="300" height="300">
+                          <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Еще что то" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Еще что то</span>
                             </div>
                           </div>
                   </div>
                   <div class="features-list__item">
-                          <div class="illustrated-item illustrated-item--column"><img src="./assets/img/illustrations/features/1.png" alt="Еще что то" width="300" height="300">
+                          <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Еще что то" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Еще что то</span>
                             </div>
                           </div>
@@ -419,7 +570,7 @@
                 </ul>
         </div>
       </section>
-      <!-- Акции - 2 часа-->
+      <!-- Акции - 2 часа --->
       <section class="lw-section">
         <div class="lw-container lw-section-column-container">
                 <h2 class="lw-section-title"><span>Вопросы и ответы</span>

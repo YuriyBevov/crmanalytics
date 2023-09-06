@@ -1,0 +1,46 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/features-list
+
+section.lw-section
+  .lw-container.lw-section-column-container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Кому подходят наши услуги'
+    })
+
+    +features-list([
+      {
+        img: 'illustrations/features/1.png',
+        imgW: '300',
+        imgH: '300',
+
+        cls: 'illustrated-item--column',
+        title: 'Опт и розница',
+      },
+      {
+        img: 'illustrations/features/2.png',
+        imgW: '300',
+        imgH: '300',
+
+        cls: 'illustrated-item--column',
+        title: 'Тендеры',
+      },
+
+      {
+        img: 'illustrations/features/3.png',
+        imgW: '300',
+        imgH: '300',
+
+        cls: 'illustrated-item--column',
+        title: 'HR-аналитика',
+      },
+
+      {
+        img: 'illustrations/features/4.png',
+        imgW: '300',
+        imgH: '300',
+
+        cls: 'illustrated-item--column',
+        title: 'Производственные <br> компании',
+      }
+    ])

@@ -191,6 +191,15 @@
   }
 
   &-base-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary);
+
+    @include m-b-mobile-lg-down {
+      font-size: 14px;
+    }
+  }
+  /*&-base-text {
     margin-top: 0;
     color: var(--secondary);
     opacity: .6;
@@ -199,7 +208,7 @@
     @include m-b-mobile-lg-down {
       font-size: 14px;
     }
-  }
+  }*/
 
   &-accent-color {
     color: var(--danger);

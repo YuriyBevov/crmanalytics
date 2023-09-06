@@ -1,46 +1,31 @@
 include ../../mixins/bitrix-contain-title
-include ../../mixins/features-list
+include ../../mixins/main-btn
 
-section.lw-section
-  .lw-container.lw-section-column-container
-    +bitrix-contain-title({
-      tag: 'h2',
-      prolog: 'Кому подходят наши услуги'
-    })
+section.lw-section.features
+  .lw-container
+    .features__grid
+      .features__grid-item
+        +bitrix-contain-title({
+          tag: 'h2',
+          prolog: 'Чем мы можем вам помочь',
+          bitrixLogoExcluded: true
+        })
 
-    +features-list([
-      {
-        img: 'illustrations/features/1.png',
-        imgW: '300',
-        imgH: '300',
+        ul.features__list
+          li.features__list-item.lw-base-text Продвину лучше и дешевле, чем в агентстве
+          li.features__list-item.lw-base-text Предоставлю оперативную связь и быстрый результат
+          li.features__list-item.lw-base-text Подберу индивидуальный подход в сотрудничестве
+          li.features__list-item.lw-base-text Проведу предварительную консультацию
+          li.features__list-item.lw-base-text Расскажу, как улучшить сайт до начала работ
+          li.features__list-item.lw-base-text Помогу выбрать стратегию SEO-продвижения
 
-        cls: 'illustrated-item--column',
-        title: 'Опт и розница',
-      },
-      {
-        img: 'illustrations/features/2.png',
-        imgW: '300',
-        imgH: '300',
+        +main-btn({
+          tag: 'a',
+          href: 'company.html',
+          cls: '',
+          btnText: 'Заказать внедрение'
+        })
 
-        cls: 'illustrated-item--column',
-        title: 'Тендеры',
-      },
+      .features__grid-item
+        img(src="./assets/img/feature-section-bg.png" alt="Сертификат партнера" width="700" height="440")
 
-      {
-        img: 'illustrations/features/3.png',
-        imgW: '300',
-        imgH: '300',
-
-        cls: 'illustrated-item--column',
-        title: 'HR-аналитика',
-      },
-
-      {
-        img: 'illustrations/features/4.png',
-        imgW: '300',
-        imgH: '300',
-
-        cls: 'illustrated-item--column',
-        title: 'Производственные <br> компании',
-      }
-    ])

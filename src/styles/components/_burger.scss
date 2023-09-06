@@ -1,24 +1,51 @@
-.burger {
+.main-nav-opener {
+  position: relative;
   @extend .btn-reset;
   @extend .flex-column;
   justify-content: space-between;
-  width: 40px;
-  height: 40px;
-  margin-left: auto;
+  width: 32px;
+  height: 24px;
+
+  cursor: pointer;
 
   @extend .hover-opacity;
 
   &__line {
     display: block;
     width: 100%;
-    height: 3px;
-    margin: 5px 0;
-    background-color: var(--info);
+    height: 2px;
+    margin: 2px 0;
+    border-radius: 3px;
+    background-color: var(--white);
   }
+}
 
-  display: none;
+.main-nav-closer {
+  @extend .btn-reset;
 
-  @include m-b-down(1140px) {
-    display: flex;
+  position: relative;
+  width: 32px;
+  height: 32px;
+
+  cursor: pointer;
+
+  & > .main-nav-closer__line {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 33px;
+    width: 2px;
+    border-radius: 3px;
+
+    background-color: var(--white);
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:last-child {
+      transform: rotate(-45deg);
+    }
   }
 }

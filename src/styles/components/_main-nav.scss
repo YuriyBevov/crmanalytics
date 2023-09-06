@@ -1,25 +1,134 @@
 .main-nav {
-  @extend .flex-wrap;
-  align-items: center;
-  margin-left: auto;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(23,39,85,.8);
+
+  &.active {
+    display: block;
+  }
+
+  .main-logo {
+    margin-left: -15px;
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @extend .flex-column;
+    align-items: flex-start;
+
+    width: 100%;
+    max-width:800px;
+    height: 100%;
+    padding-bottom: 60px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    box-shadow: 0px 2px 4px 0px #12214d;
+    background-color: var(--primary);
+
+    opacity: 0;
+    animation: fadeIn var(--main-transition) forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &__header {
+    position: sticky;
+    top: 0;
+
+    @extend .flex-wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 30px;
+
+    @include m-b-tablet-down {
+      box-shadow: 0px 2px 4px 0px #12214d;
+    }
+    background-color: var(--primary);
+  }
 
   &__list {
     @extend .list-reset;
-    @extend .flex-wrap;
-    align-items: center;
+    padding: 100px 30px;
+    width: 100%;
 
-    @include m-b-down(1140px) {
-      display: none;
+    @include m-b-tablet-down {
+      padding: 60px 30px;
     }
   }
 
   &__list-item {
     a {
-      @extend .flex-centered-content;
+      display: flex;
       font-size: 20px;
-      padding: 10px;
-      margin: 0 8px;
-      color: var(--info);
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 20px 0;
+      padding-right: 20px;
+      color: var(--white);
+
+      @extend .hover-opacity;
+
+      @include m-b-tablet-down {
+        font-size: 18px;
+        padding: 15px 0;
+        padding-right: 20px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 16px;
+        padding: 12px 0;
+        padding-right: 15px;
+      }
+    }
+
+    border-bottom: 1px solid #2a407c;
+  }
+
+  &__contacts {
+    @extend .flex-column;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 15px 30px;
+
+    a {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--white);
+      @extend .hover-opacity;
+
+      @include m-b-tablet-down {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__social {
+    @extend .flex-wrap;
+    column-gap: 15px;
+    padding: 15px 30px;
+
+    a {
+      svg {
+        fill: var(--white);
+      }
 
       @extend .hover-opacity;
     }

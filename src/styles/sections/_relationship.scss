@@ -1,0 +1,28 @@
+.relationship {
+
+  &__list {
+    @extend .list-reset;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+
+    @include m-b-down(960px) {
+      grid-template-columns: 1fr;
+      grid-gap: 5px;
+    }
+  }
+
+  &__list-item {
+    .illustrated-item__content {
+      padding: 0;
+    }
+
+    .illustrated-item img {
+      max-width: 40%;
+
+      @include m-b-down(960px) {
+        max-width: 300px;
+      }
+    }
+  }
+}

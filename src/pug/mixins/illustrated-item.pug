@@ -1,6 +1,6 @@
 mixin illustrated-item(data)
   .illustrated-item( class= data.cls ? data.cls :null )
-    img(src=`./assets/img/${data.img}` alt= data.title width=data.imgW height=data.imgH)
+    img(rel="preload" src=`./assets/img/${data.img}` alt= data.title width=data.imgW height=data.imgH)
 
     .illustrated-item__content
       span.lw-title-sm!= data.title

@@ -24,6 +24,59 @@ if (expandedLists) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/nav.js":
+/*!************************************!*\
+  !*** ./src/scripts/modules/nav.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
+
+const navOpener = document.querySelector('.main-nav-opener');
+if (navOpener) {
+  const navCloser = document.querySelector('.main-nav-closer');
+  const nav = document.querySelector('.main-nav');
+  const overlay = nav.querySelector('.main-nav__container');
+  if (navCloser && nav) {
+    const init = evt => {
+      evt.stopPropagation();
+      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(true);
+      nav.classList.add('active');
+      navOpener.removeEventListener('click', init);
+      navCloser.addEventListener('click', closeNavHandler);
+      window.addEventListener('click', onOverlayClickHandler);
+      document.addEventListener('keydown', onEscClickHandler);
+    };
+    const refresh = () => {
+      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(false);
+      nav.classList.remove('active');
+      navCloser.removeEventListener('click', closeNavHandler);
+      window.removeEventListener('click', onOverlayClickHandler);
+      document.removeEventListener('keydown', onEscClickHandler);
+      navOpener.addEventListener('click', init);
+    };
+    const closeNavHandler = () => {
+      refresh();
+    };
+    const onOverlayClickHandler = evt => {
+      if (evt.target !== overlay) {
+        refresh();
+      }
+    };
+    const onEscClickHandler = evt => {
+      console.log(evt.key);
+      if (evt.key === 'Escape' || evt.key === 27) {
+        refresh();
+      }
+    };
+    navOpener.addEventListener('click', init);
+  }
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/swiper.js":
 /*!***************************************!*\
   !*** ./src/scripts/modules/swiper.js ***!
@@ -80,6 +133,159 @@ if (clientSlider) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/scripts/utils/functions.js":
+/*!****************************************!*\
+  !*** ./src/scripts/utils/functions.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   addClass: () => (/* binding */ addClass),
+/* harmony export */   bodyLocker: () => (/* binding */ bodyLocker),
+/* harmony export */   checkClass: () => (/* binding */ checkClass),
+/* harmony export */   focusTrap: () => (/* binding */ focusTrap),
+/* harmony export */   getBoundingClientRect: () => (/* binding */ getBoundingClientRect),
+/* harmony export */   getCssPropertyValue: () => (/* binding */ getCssPropertyValue),
+/* harmony export */   getMousePos: () => (/* binding */ getMousePos),
+/* harmony export */   getRadians: () => (/* binding */ getRadians),
+/* harmony export */   lerp: () => (/* binding */ lerp),
+/* harmony export */   limitStr: () => (/* binding */ limitStr),
+/* harmony export */   removeClass: () => (/* binding */ removeClass),
+/* harmony export */   setCssProperty: () => (/* binding */ setCssProperty),
+/* harmony export */   setVieportHeight: () => (/* binding */ setVieportHeight),
+/* harmony export */   toggleClass: () => (/* binding */ toggleClass)
+/* harmony export */ });
+// работа с root
+
+const root = document.querySelector(':root');
+function getCssPropertyValue(name) {
+  return getComputedStyle(root).getPropertyValue(name);
+}
+function setCssProperty(name, value) {
+  root.style.setProperty(name, value);
+}
+function setVieportHeight() {
+  let vh = window.innerHeight * 0.01;
+  //document.documentElement.style.setProperty('--vh', `${vh}px`);
+  setCssProperty('--vh', `${vh}px`);
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    setCssProperty('--vh', `${vh}px`);
+  });
+}
+function addClass(el, cl) {
+  el.classList.add(cl);
+}
+function removeClass(el, cl) {
+  el.classList.remove(cl);
+}
+function checkClass(el, cl) {
+  return el.classList.contains(cl);
+}
+function toggleClass(el, cl) {
+  el.classList.toggle(cl);
+}
+
+// Linear interpolation
+const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+// Позиция мыши
+const getMousePos = evt => {
+  return {
+    x: evt.clientX,
+    y: evt.clientY
+  };
+};
+
+//получение радиан из градусов(для канваса)
+function getRadians(degrees) {
+  return Math.PI / 180 * degrees;
+}
+
+// Ограничение длины текста по кол-ву символов
+function limitStr(str, n) {
+  if (str.length > n) {
+    return str.slice(0, n) + '...';
+  } else {
+    return str;
+  }
+}
+// запрет скролла у body
+function bodyLocker(bool) {
+  let body = document.querySelector('body');
+  let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+  if (bool) {
+    body.style.overflow = 'hidden';
+    body.style.paddingRight = paddingOffset;
+  } else {
+    body.style.overflow = 'auto';
+    body.style.paddingRight = '0px';
+  }
+}
+function focusTrap(el) {
+  let initialFocusedEl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  const focusableElements = ['a[href]', 'input', 'select', 'textarea', 'button', 'iframe', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
+  const firstFocusableElement = el.querySelectorAll(focusableElements)[0];
+  const focusableContent = el.querySelectorAll(focusableElements);
+  const lastFocusableElement = focusableContent[focusableContent.length - 1];
+  let onBtnClickHandler = evt => {
+    let isTabPressed = evt.key === 'Tab' || evt.key === 9;
+    if (evt.key === 'Escape') {
+      document.removeEventListener('keydown', onBtnClickHandler);
+      console.log('ESC');
+    }
+    if (!isTabPressed) {
+      return;
+    }
+    if (evt.shiftKey) {
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement.focus();
+        evt.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastFocusableElement) {
+        firstFocusableElement.focus();
+        evt.preventDefault();
+      }
+    }
+  };
+  document.addEventListener('keydown', onBtnClickHandler);
+  initialFocusedEl !== null ? initialFocusedEl.focus() : firstFocusableElement.focus();
+}
+
+// вычисление поз-и/размеров эл-та
+function getBoundingClientRect(elem, side) {
+  if (side === 'height') {
+    return elem.getBoundingClientRect().height;
+  }
+  if (side === 'width') {
+    return elem.getBoundingClientRect().width;
+  }
+  if (side === 'top') {
+    return elem.getBoundingClientRect().top;
+  }
+  if (side === 'bottom') {
+    return elem.getBoundingClientRect().bottom;
+  }
+  if (side === 'left') {
+    return elem.getBoundingClientRect().left;
+  }
+  if (side === 'right') {
+    return elem.getBoundingClientRect().right;
+  }
+  if (side === 'x') {
+    return elem.getBoundingClientRect().x;
+  }
+  if (side === 'y') {
+    return elem.getBoundingClientRect().y;
+  }
+}
+
 
 /***/ }),
 
@@ -13130,9 +13336,11 @@ var __webpack_exports__ = {};
   !*** ./src/scripts/main.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper.js */ "./src/scripts/modules/swiper.js");
-/* harmony import */ var _modules_expanded_list_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/expanded-list.js */ "./src/scripts/modules/expanded-list.js");
-/* harmony import */ var _modules_expanded_list_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_expanded_list_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/nav.js */ "./src/scripts/modules/nav.js");
+/* harmony import */ var _modules_swiper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/swiper.js */ "./src/scripts/modules/swiper.js");
+/* harmony import */ var _modules_expanded_list_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/expanded-list.js */ "./src/scripts/modules/expanded-list.js");
+/* harmony import */ var _modules_expanded_list_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_expanded_list_js__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 })();
