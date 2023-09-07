@@ -40,7 +40,7 @@
     @include m-b-mobile-lg-down {
       font-size: 24px;
       padding: 0;
-      margin-bottom: 0;
+      //margin-bottom: 0;
     }
   }
 
@@ -48,6 +48,7 @@
     display: inline-block;
     font-size: 24px;
     text-align: center;
+    margin-top: 0;
     margin-bottom: 70px;
     max-width: 1000px;
     padding: 0 20px;

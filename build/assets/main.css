@@ -1331,7 +1331,7 @@ a {
   justify-content: center;
 }
 
-.flex-column, .main-footer__grid-section, .contacts__list-item, .licenses__grid-item, .results__list-item, .results__list, .hero__container, .hero, .developer, .company-footer-info .contacts, .company-footer-info, .expanded-list__item, .expanded-list, .price-block, .price-card__footer, .price-card__header, .price-card, .staff-card__content, .about-item__header-content, .iconed-item, .illustrated-item--column, .illustrated-item__content, .main-nav-opener, .main-nav__contacts, .main-nav__container, .lw-section-column-container, .lw-skew-section .lw-skew-section-container {
+.flex-column, .main-footer__grid-section, .contacts__list-item, .licenses__grid-item, .results__list-item, .results__list, .hero__container, .hero, .developer, .company-footer-info .contacts, .company-footer-info, .expanded-list__item, .expanded-list, .price-block, .price-card__footer, .price-card__header, .price-card, .price-card-list--fullheight .price-card-list__item, .staff-card__content, .about-item__header-content, .iconed-item, .illustrated-item--column, .illustrated-item__content, .main-nav-opener, .main-nav__contacts, .main-nav__container, .lw-section-column-container, .lw-skew-section .lw-skew-section-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1476,13 +1476,13 @@ a {
   .lw-main-title {
     font-size: 24px;
     padding: 0;
-    margin-bottom: 0;
   }
 }
 .lw-main-text {
   display: inline-block;
   font-size: 24px;
   text-align: center;
+  margin-top: 0;
   margin-bottom: 70px;
   max-width: 1000px;
   padding: 0 20px;
@@ -2571,6 +2571,12 @@ a {
     grid-template-columns: 1fr;
   }
 }
+.price-card-list--fullheight .price-card-list__item {
+  height: 100%;
+}
+.price-card-list--fullheight .price-card-list__item .price-card {
+  height: 100%;
+}
 
 .price-card {
   -webkit-box-align: center;
@@ -2634,6 +2640,11 @@ a {
   text-transform: uppercase;
   margin-bottom: 20px;
   color: var(--price-block-main-color);
+}
+@media (min-width: 1024px) {
+  .price-card__title {
+    min-height: 64px;
+  }
 }
 @media (max-width: 1023px) {
   .price-card__title {

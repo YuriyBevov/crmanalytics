@@ -69,6 +69,10 @@
     margin-bottom: 20px;
     color: var(--price-block-main-color);
 
+    @include m-b-laptop-up {
+      min-height: 64px;
+    }
+
     @include m-b-laptop-down {
       font-size: 20px;
     }

@@ -9,4 +9,15 @@
   @include m-b-laptop-down {
     grid-template-columns: 1fr;
   }
+
+  &--fullheight {
+    .price-card-list__item {
+      @extend .flex-column;
+      height: 100%;
+
+      .price-card {
+        height: 100%;
+      }
+    }
+  }
 }
