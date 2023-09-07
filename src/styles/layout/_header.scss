@@ -24,6 +24,10 @@
       padding: 0 40px;
     }
 
+    @include m-b-tablet-down {
+      padding: 0 25px;
+    }
+
     .contacts {
       @extend .flex-wrap;
       align-items: center;
