@@ -1,11 +1,4 @@
 .comparing {
-
-  .lw-table-wrapper {
-    width: 100%;
-    overflow: hidden;
-    overflow-x: auto;
-  }
-
   &__table {
     min-width: 600px;
     border-collapse: collapse;
@@ -67,8 +60,6 @@
       }
     }
   }
-
-
 }
 
 

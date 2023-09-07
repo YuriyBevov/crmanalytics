@@ -3,20 +3,13 @@ header.header
     include ../components/main-logo
 
     .header__info
-      .header__info-contacts
-        a(href="mailto:hello@crmanalytics.ru") hello@crmanalytics.ru
-        a(href="tel:+79219260260") +7 921 926 02 60
+      include ../components/contacts
 
       .header__info-social
         a(href="#" rel="noopener nofollow norefferer")
           svg(width="18" height="18")
             use(xlink:href="./assets/sprite.svg#icon-chat")
-        a(href="#" rel="noopener nofollow norefferer")
-          svg(width="18" height="18")
-            use(xlink:href="./assets/sprite.svg#icon-tg")
-        a(href="#" rel="noopener nofollow norefferer")
-          svg(width="18" height="18")
-            use(xlink:href="./assets/sprite.svg#icon-whatsapp")
+        include ../components/social
 
     include ../components/burger
     include ../components/main-nav

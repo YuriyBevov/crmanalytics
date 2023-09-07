@@ -5,8 +5,11 @@
   justify-content: space-between;
   width: 32px;
   height: 24px;
-
   cursor: pointer;
+
+  @include m-b-mobile-lg-down {
+    margin-right: 20px;
+  }
 
   @extend .hover-opacity;
 

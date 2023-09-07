@@ -1,0 +1,51 @@
+include ../../mixins/bitrix-contain-title
+include ../../mixins/main-btn
+include ../../mixins/case-card
+
+section.lw-section.portfolio
+  .lw-container.portfolio__container
+    +bitrix-contain-title({
+      tag: 'h2',
+      prolog: 'Наши кейсы',
+      bitrixLogoExcluded: true,
+    })
+
+    .swiper-container.main-slider-container
+      .swiper.main-slider
+        .swiper-wrapper
+          .swiper-slide
+            +case-card({
+              title: 'Внедрение БИТРИКС24 В ПРОИЗВОДСТВЕННУЮ КОМПАНИЮ',
+
+              img: 'illustrations/cases/1.png'
+            })
+          .swiper-slide
+            +case-card({
+              title: 'ВНЕДРЕНИЕ БИТРИКС24 В ТЕНДЕРЫ',
+
+              img: 'illustrations/cases/2.png'
+            })
+
+          .swiper-slide
+            +case-card({
+              title: 'ВНЕДРЕНИЕ БИТРИКС24 В HR-АНАЛИТИКУ',
+
+              img: 'illustrations/cases/3.png'
+            })
+
+          .swiper-slide
+            +case-card({
+              title: 'ВНЕДРЕНИЕ БИТРИКС24 В ОПТОВО-РОЗНИЧНЮ ТОРГОВЛЮ',
+
+              img: 'illustrations/cases/4.png'
+            })
+
+      .swiper-button-prev
+      .swiper-button-next
+
+    +main-btn({
+      tag: 'a',
+      href: '#',
+      cls: 'portfolio__btn',
+      btnText: 'Получить кейсы на почту'
+    })

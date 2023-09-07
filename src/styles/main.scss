@@ -11,6 +11,8 @@
 @import "./layout/header";
 
 /* Компоненты */
+@import "./components/contacts";
+@import "./components/social";
 @import "./components/blockquote";
 @import "./components/main-logo";
 @import "./components/bitrix-logo";
@@ -28,11 +30,14 @@
 @import "./components/offer-form";
 @import "./components/features-list";
 @import "./components/expanded-list";
+@import "./components/company-footer-info";
+@import "./components/developer";
 
 /* Секции */
 @import "./sections/hero";
 @import "./sections/features";
 @import "./sections/advantages";
+@import "./sections/portfolio";
 @import "./sections/services";
 @import "./sections/skew-section";
 @import "./sections/workflow";
@@ -44,6 +49,10 @@
 @import "./sections/contacts";
 @import "./sections/relationship";
 @import "./sections/comparing";
+@import "./sections/sale";
+@import "./sections/portfolio";
+
+@import "./layout/footer";
 /* Модальные окна */
 
 

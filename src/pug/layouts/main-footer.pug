@@ -1,2 +1,41 @@
-footer
-  p footer
+footer.main-footer
+  .lw-container
+    .main-footer__grid
+      .main-footer__grid-section
+        include ../components/main-logo
+
+        .company-footer-info
+          span.lw-title-sm СВЯЖИТЕСЬ С Нами
+          include ../components/contacts
+          include ../components/social
+          span.lw-base-text Мы работаем с 9 утра до 7 вечера.
+          span.lw-base-text ИП Шкутов М.И.
+          span.lw-base-text ИНН 780427809308
+      .main-footer__grid-section
+        span.lw-title-sm Битрикс24
+        ul
+          li
+            a(href="#").lw-base-text О системе
+          li
+            a(href="#").lw-base-text Коробочная версия
+          li
+            a(href="#").lw-base-text CRM. Оплата и доставка
+
+      .main-footer__grid-section
+        span.lw-title-sm Услуги
+        ul
+          li
+            a(href="#").lw-base-text Продажа и продление лицензии
+          li
+            a(href="#").lw-base-text Пакетное внедрение
+          li
+            a(href="#").lw-base-text Русский робот
+          li
+            a(href="#").lw-base-text Интеграция WhatsApp с Битрикс24
+      .main-footer__grid-section
+        span.lw-title-sm О компании
+        ul
+          li
+            a(href="#").lw-base-text Кейсы
+
+    include ../components/developer

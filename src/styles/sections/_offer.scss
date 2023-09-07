@@ -20,7 +20,7 @@
 
   &__container {
     position: relative;
-    padding: 30px 150px;
+    padding: 50px 150px;
 
     @include m-b-down(1280px) {
       padding: 30px 100px;

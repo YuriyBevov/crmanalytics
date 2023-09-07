@@ -2,6 +2,10 @@
   @extend .flex-centered-content;
   @extend .hover-opacity;
 
+  @include m-b-mobile-lg-down {
+    margin-left: 5px;
+  }
+
   img {
     width: 120px;
     height: auto;

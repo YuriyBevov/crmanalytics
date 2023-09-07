@@ -1,0 +1,18 @@
+.social {
+  @extend .flex-wrap;
+  align-items: center;
+  column-gap: 10px;
+
+  a {
+    @extend .flex-centered-content;
+    padding: 5px;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+
+    svg {
+      fill: white;
+    }
+
+    @extend .hover-opacity;
+  }
+}

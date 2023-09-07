@@ -1,0 +1,28 @@
+.developer {
+  @extend .flex-column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid var(--white);
+
+  a {
+    display: flex;
+
+    img {
+      width: fit-content;
+      max-width: 280px;
+      height: auto;
+      object-fit: contain;
+
+      @include m-b-tablet-down {
+        max-width: 240px;
+      }
+
+      @include m-b-mobile-lg-down {
+        max-width: 200px;
+      }
+    }
+
+    @extend .hover-opacity;
+  }
+}

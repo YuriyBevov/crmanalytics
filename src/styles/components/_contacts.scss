@@ -1,0 +1,18 @@
+.contacts {
+  a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--white);
+
+    @extend .hover-opacity;
+
+    @include m-b-laptop-down {
+      font-size: 18px;
+    }
+
+    @include m-b-down(860px) {
+      font-size: 16px;
+    }
+  }
+}

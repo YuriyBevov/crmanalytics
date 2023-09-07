@@ -8,4 +8,38 @@
     max-width: 800px;
     margin: 0 auto;
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--primary);
+  }
+
+  .swiper-button-next,
+    .swiper-button-prev {
+      color: var(--primary);
+      margin: 0;
+      transform: translateY(-50%);
+
+      @include m-b-mobile-lg-down {
+        &::after {
+          font-size: 30px;
+        }
+      }
+
+      @include m-b-down(386px) {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      @include m-b-mobile-lg-down {
+        left: 0;
+      }
+    }
+
+    .swiper-button-next {
+      @include m-b-mobile-lg-down {
+        right: 0;
+      }
+    }
 }
