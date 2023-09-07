@@ -2752,19 +2752,19 @@ a {
     grid-template-columns: 1fr;
   }
 }
-.offer-form__wrapper {
+.offer-form-wrapper {
   padding: 50px 40px;
   width: 100%;
   border-radius: 10px;
   background-color: var(--primary);
 }
 @media (max-width: 1439px) {
-  .offer-form__wrapper {
+  .offer-form-wrapper {
     padding: 30px;
   }
 }
 @media (max-width: 533px) {
-  .offer-form__wrapper {
+  .offer-form-wrapper {
     padding: 30px 15px;
   }
 }

@@ -4,9 +4,9 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <title></title>
+    <meta name="description" content="Описание"/>
+    <meta name="keywords" content="Ключевые слова"/>
+    <title>CRMAnalytics</title>
     <link rel="stylesheet" href="./assets/main.css"/>
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
@@ -15,14 +15,14 @@
       <div class="lw-container header__container"><a class="main-logo" href="index.html"><img src="./assets/img/logo.svg" alt="crmanalytics.ru - Внедрение и настройка CRM Битрикс24" width="160" height="50"></a>
         <div class="header__info">
           <div class="contacts"><a href="mailto:hello@crmanalytics.ru">hello@crmanalytics.ru</a><a href="tel:+79219260260">+7 921 926 02 60</a></div>
-          <div class="header__info-social"><a href="#" rel="noopener nofollow norefferer">
+          <div class="header__info-social"><a href="#" rel="noopener nofollow norefferer" aria-label="Оставить заявку">
               <svg width="18" height="18">
                 <use xlink:href="./assets/sprite.svg#icon-chat"></use>
               </svg></a>
-            <div class="social"><a href="#" rel="noopener nofollow norefferer">
+            <div class="social"><a href="#" rel="noopener nofollow noreferrer" aria-label="Telegram">
                 <svg width="18" height="18">
                   <use xlink:href="./assets/sprite.svg#icon-tg"></use>
-                </svg></a><a href="#" rel="noopener nofollow norefferer">
+                </svg></a><a href="#" rel="noopener nofollow noreferrer" aria-label="Whatsapp">
                 <svg width="18" height="18">
                   <use xlink:href="./assets/sprite.svg#icon-whatsapp"></use>
                 </svg></a></div>
@@ -43,13 +43,15 @@
               <li class="main-nav__list-item"><a href="#">Контакты</a></li>
             </ul>
             <div class="main-nav__contacts"><a href="mailto:hello@crmanalytics.ru">hello@crmanalytics.ru</a><a href="tel:+79219260260">+7 921 926 02 60</a></div>
-            <div class="main-nav__social"><a href="#" rel="noopener nofollow norefferer">
-                <svg width="24" height="24">
-                  <use xlink:href="./assets/sprite.svg#icon-tg"></use>
-                </svg></a><a href="#" rel="noopener nofollow norefferer">
-                <svg width="24" height="24">
-                  <use xlink:href="./assets/sprite.svg#icon-whatsapp"></use>
-                </svg></a></div>
+            <div class="main-nav__social">
+              <div class="social"><a href="#" rel="noopener nofollow noreferrer" aria-label="Telegram">
+                  <svg width="18" height="18">
+                    <use xlink:href="./assets/sprite.svg#icon-tg"></use>
+                  </svg></a><a href="#" rel="noopener nofollow noreferrer" aria-label="Whatsapp">
+                  <svg width="18" height="18">
+                    <use xlink:href="./assets/sprite.svg#icon-whatsapp"></use>
+                  </svg></a></div>
+            </div>
           </div>
         </nav>
       </div>
@@ -76,7 +78,7 @@
                 <li class="features__list-item lw-base-text">Расскажу, как улучшить сайт до начала работ</li>
                 <li class="features__list-item lw-base-text">Помогу выбрать стратегию SEO-продвижения</li>
               </ul>
-                    <a class="lw-main-btn">Заказать внедрение</a>
+                    <a class="lw-main-btn" href="company.html">Заказать внедрение</a>
             </div>
             <div class="features__grid-item"><img src="./assets/img/feature-section-bg.png" alt="Сертификат партнера" width="700" height="440"></div>
           </div>
@@ -147,7 +149,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
-                <a class="lw-main-btn">Подробнее</a>
+                <a class="lw-main-btn" href="company.html">Подробнее</a>
         </div>
       </section>
       <section class="lw-section advantages">
@@ -296,7 +298,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
-                <a class="portfolio__btn lw-main-btn">Получить кейсы на почту</a>
+                <a class="portfolio__btn lw-main-btn" href="#">Получить кейсы на почту</a>
         </div>
       </section>
       <section class="lw-section comparing">
@@ -306,49 +308,49 @@
           <div class="lw-table-wrapper">
             <table class="comparing__table">
               <tr>
-                <td></td>
-                <td class="lw-base-text">БИТРИКС24</td>
-                <td class="lw-base-text">Мегаплан</td>
-                <td class="lw-base-text">1C CRM</td>
+                <td scope="col"></td>
+                <td class="lw-base-text" scope="col">БИТРИКС24</td>
+                <td class="lw-base-text" scope="col">Мегаплан</td>
+                <td class="lw-base-text" scope="col">1C CRM</td>
               </tr>
               <tr>
-                <td class="lw-base-text">Интеграция с любыми сайтами</td>
+                <td class="lw-base-text" scope="row">Интеграция с любыми сайтами</td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
               </tr>
               <tr>
-                <td class="lw-base-text">Интеграция с любой IP-телефонией</td>
+                <td class="lw-base-text" scope="row">Интеграция с любой IP-телефонией</td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
               </tr>
               <tr>
-                <td class="lw-base-text">Звонки прямо из CRM-системы</td>
+                <td class="lw-base-text" scope="row">Звонки прямо из CRM-системы</td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
               </tr>
               <tr>
-                <td class="lw-base-text">Подходит для холодных звонков</td>
+                <td class="lw-base-text" scope="row">Подходит для холодных звонков</td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
               </tr>
               <tr>
-                <td class="lw-base-text">Интеграция с почтой</td>
+                <td class="lw-base-text" scope="row">Интеграция с почтой</td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
               </tr>
               <tr>
-                <td class="lw-base-text">Множественные воронки продаж</td>
+                <td class="lw-base-text" scope="row">Множественные воронки продаж</td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
               </tr>
               <tr>
-                <td class="lw-base-text">Воронка продаж для постоянных покупателей (повторяющиеся абонентские платежи)</td>
+                <td class="lw-base-text" scope="row">Воронка продаж для постоянных покупателей (повторяющиеся абонентские платежи)</td>
                 <td><img src="./assets/img/icon-check-up.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
                 <td><img src="./assets/img/icon-none.svg" alt="" width="60" height="60"></td>
@@ -439,36 +441,36 @@
                 <h2 class="lw-section-title"><span>Кому подходят наши услуги</span><span class="bitrix-logo">&thinsp;Битрикс<span>24</span>&thinsp;</span>
                 </h2>
                 <ul class="features-list">
-                  <div class="features-list__item">
+                  <li class="features-list__item">
                           <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Опт и розница" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Опт и розница</span>
                             </div>
                           </div>
-                  </div>
-                  <div class="features-list__item">
+                  </li>
+                  <li class="features-list__item">
                           <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/2.png" alt="Тендеры" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Тендеры</span>
                             </div>
                           </div>
-                  </div>
-                  <div class="features-list__item">
+                  </li>
+                  <li class="features-list__item">
                           <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/3.png" alt="HR-аналитика" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">HR-аналитика</span>
                             </div>
                           </div>
-                  </div>
-                  <div class="features-list__item">
+                  </li>
+                  <li class="features-list__item">
                           <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/4.png" alt="Производственные &lt;br&gt; компании" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Производственные <br> компании</span>
                             </div>
                           </div>
-                  </div>
+                  </li>
                 </ul>
         </div>
       </section>
-      <section class="lw-section offer">
+      <div class="lw-section offer">
         <div class="lw-container-fluid offer__container">
-          <div class="offer-form__wrapper"><span class="lw-section-title">Оставьте заявку на <span class="lw-accent-color">внедрение</span></span>
+          <div class="offer-form-wrapper"><span class="lw-section-title">Оставьте заявку на <span class="lw-accent-color">внедрение</span></span>
             <form class="offer-form" action="#">
               <fieldset>
                 <input type="text" placeholder="Имя*">
@@ -488,7 +490,7 @@
             </form>
           </div>
         </div>
-      </section>
+      </div>
       <section class="lw-section relationship">
         <div class="lw-container lw-section-column-container">
                 <h2 class="lw-section-title"><span>Почему выберают нас</span>
@@ -663,30 +665,30 @@
                 <h2 class="lw-section-title"><span>Ограничения</span>
                 </h2>
                 <ul class="features-list">
-                  <div class="features-list__item">
+                  <li class="features-list__item">
                           <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Отсутствие времени у руководителя" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Отсутствие времени у руководителя</span>
                             </div>
                           </div>
-                  </div>
-                  <div class="features-list__item">
+                  </li>
+                  <li class="features-list__item">
                           <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Бюджет" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Бюджет</span>
                             </div>
                           </div>
-                  </div>
-                  <div class="features-list__item">
+                  </li>
+                  <li class="features-list__item">
                           <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Еще что то" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Еще что то</span>
                             </div>
                           </div>
-                  </div>
-                  <div class="features-list__item">
+                  </li>
+                  <li class="features-list__item">
                           <div class="illustrated-item illustrated-item--column"><img rel="preload" src="./assets/img/illustrations/features/1.png" alt="Еще что то" width="300" height="300">
                             <div class="illustrated-item__content"><span class="lw-title-sm">Еще что то</span>
                             </div>
                           </div>
-                  </div>
+                  </li>
                 </ul>
         </div>
       </section>
@@ -771,7 +773,7 @@
           </div>
         </div>
       </section>
-      <section class="lw-section">
+      <section class="lw-section contacts">
         <div class="lw-container">
                 <h2 class="lw-section-title"><span>Наши контакты</span>
                 </h2>
@@ -820,14 +822,14 @@
                 клиентов - уже прорыв. Почти все компании либо уже внедрили CRM-системы, либо выбирают их. Это стандарт бизнеса.
               </p>
               <p class="lw-base-text">Внедрить CRM – значит облегчить жизнь и владельцу бизнеса, и управляющему этим бизнесом, и работникам предприятия, и клиентам компании.</p>
-                    <a class="lw-main-btn">Карточка партнера на официальном сайте БИТРИКС24</a>
+                    <a class="lw-main-btn" href="company.html">Карточка партнера на официальном сайте БИТРИКС24</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="lw-section offer">
+      <div class="lw-section offer">
         <div class="lw-container-fluid offer__container">
-          <div class="offer-form__wrapper"><span class="lw-section-title">Оставьте заявку на <span class="lw-accent-color">внедрение</span></span>
+          <div class="offer-form-wrapper"><span class="lw-section-title">Оставьте заявку на <span class="lw-accent-color">внедрение</span></span>
             <form class="offer-form" action="#">
               <fieldset>
                 <input type="text" placeholder="Имя*">
@@ -847,7 +849,7 @@
             </form>
           </div>
         </div>
-      </section>
+      </div>
     </main>
     <footer class="main-footer">
       <div class="lw-container">
@@ -855,10 +857,10 @@
           <div class="main-footer__grid-section"><a class="main-logo" href="index.html"><img src="./assets/img/logo.svg" alt="crmanalytics.ru - Внедрение и настройка CRM Битрикс24" width="160" height="50"></a>
             <div class="company-footer-info"><span class="lw-title-sm">СВЯЖИТЕСЬ С Нами</span>
               <div class="contacts"><a href="mailto:hello@crmanalytics.ru">hello@crmanalytics.ru</a><a href="tel:+79219260260">+7 921 926 02 60</a></div>
-              <div class="social"><a href="#" rel="noopener nofollow norefferer">
+              <div class="social"><a href="#" rel="noopener nofollow noreferrer" aria-label="Telegram">
                   <svg width="18" height="18">
                     <use xlink:href="./assets/sprite.svg#icon-tg"></use>
-                  </svg></a><a href="#" rel="noopener nofollow norefferer">
+                  </svg></a><a href="#" rel="noopener nofollow noreferrer" aria-label="Whatsapp">
                   <svg width="18" height="18">
                     <use xlink:href="./assets/sprite.svg#icon-whatsapp"></use>
                   </svg></a></div><span class="lw-base-text">Мы работаем с 9 утра до 7 вечера.</span><span class="lw-base-text">ИП Шкутов М.И.</span><span class="lw-base-text">ИНН 780427809308</span>
@@ -885,7 +887,7 @@
             </ul>
           </div>
         </div>
-        <div class="developer"><a href="littleweb.ru" alt="littleweb.ru - создание сайтов под ключ"><img src="./assets/img/developer-icon.svg" alt="littleweb.ru - создание сайтов под ключ" width="150" height="40"></a></div>
+        <div class="developer"><a href="littleweb.ru" aria-label="littleweb.ru - создание сайтов под ключ" rel="nofollow noreferrer nofollow"><img src="./assets/img/developer-icon.svg" alt="littleweb.ru - создание сайтов под ключ" width="150" height="40"></a></div>
       </div>
     </footer>
     <!--include ./modals/...-->
