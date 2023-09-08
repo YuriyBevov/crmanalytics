@@ -8,32 +8,34 @@
 
   img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
     object-fit: contain;
 
     @include m-b-laptop-down {
-      max-width: 300px;
-    }
-
-    @include m-b-tablet-down{
       max-width: 280px;
     }
 
-    /*@include m-b-mobile-lg-down{
+    @include m-b-tablet-down{
+      max-width: 240px;
+    }
+
+    @include m-b-tablet-down{
       max-width: 200px;
-    }*/
+    }
   }
 
   &__content {
     @extend .flex-column;
     width: fit-content;
-    padding: 40px 40px 0;
+    padding-left: 30px;
+    padding-top: 20px;
+    /*padding: 20px 40px 0;
 
     @include m-b-laptop-down {
-      padding: 30px 20px 0;
+      padding: 20px 20px 0;
     }
-
+*/
     @include m-b-tablet-down{
       //width: 100%;
       padding: 0 10px;

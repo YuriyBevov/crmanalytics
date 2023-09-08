@@ -18,11 +18,7 @@
     }
 
     .illustrated-item img {
-      max-width: 40%;
-
-      @include m-b-down(960px) {
-        max-width: 300px;
-      }
+      max-width: 190px;
     }
   }
 }

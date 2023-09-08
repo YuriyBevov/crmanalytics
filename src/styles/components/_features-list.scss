@@ -21,21 +21,13 @@
     height: 100%;
 
     img {
-      max-width: 300px;
+      max-width: 190px;
       height: auto;
       object-fit: contain;
 
-      @include m-b-down(1140px) {
-        max-width: 200px;
-      }
-
-      @include m-b-tablet-down {
-        max-width: 200px;
-      }
-
-      @include m-b-mobile-lg-down {
+      /*@include m-b-mobile-lg-down {
         max-width: 280px;
-      }
+      }*/
     }
 
     .lw-title-sm {

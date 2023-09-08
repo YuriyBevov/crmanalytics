@@ -1,4 +1,10 @@
 .contacts {
+  margin-bottom: 80px;
+
+  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+  @include m-b-down(960px) {
+    margin-bottom: 0;
+  }
   &__list {
     @extend .list-reset;
     display: grid;

@@ -1,5 +1,4 @@
 .offer {
-
   .lw-section-title {
     display: inline-block;
     margin-bottom: 50px;
@@ -55,6 +54,26 @@
       @include m-b-down(960px) {
         display: none;
         right: 0;
+      }
+    }
+  }
+
+  &--fluid {
+    .offer {
+      &-form {
+        width: 100%;
+        max-width: 100%;
+
+        &-wrapper {
+          @include m-b-desktop-up {
+            padding: 50px 140px;
+          }
+        }
+      }
+      &__container {
+        &::after {
+          display: none;
+        }
       }
     }
   }
