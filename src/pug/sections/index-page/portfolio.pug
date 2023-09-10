@@ -11,7 +11,7 @@ section.lw-section.portfolio
     })
 
     .swiper-container.main-slider-container
-      .swiper.main-slider
+      .swiper.main-slider.portfolio-slider
         .swiper-wrapper
           .swiper-slide
             +case-card({
@@ -40,8 +40,10 @@ section.lw-section.portfolio
               img: 'illustrations/cases/4.png'
             })
 
-      .swiper-button-prev
-      .swiper-button-next
+      .swiper-controls
+        .swiper-button-prev
+        .swiper-pagination
+        .swiper-button-next
 
     +main-btn({
       tag: 'a',

@@ -40,6 +40,7 @@
 
   &__content {
     @extend .flex-column;
+    padding-bottom: 50px; // new
 
     @include m-b-tablet-down {
       align-items: center;

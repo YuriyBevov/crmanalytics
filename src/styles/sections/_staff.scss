@@ -1,0 +1,27 @@
+.staff {
+  .staff-slider {
+    max-width: 1000px;
+
+    @include m-b-tablet-down {
+      margin-bottom: 30px;
+    }
+  }
+
+  .swiper-controls {
+    position: absolute;
+    bottom: 15px;
+    top: initial;
+    right: 8%;
+    width: 160px;
+    left: initial;
+    height: 40px;
+    z-index: 3;
+
+    @include m-b-tablet-down {
+      left: 50%;
+      right: 0;
+      bottom: 40px;
+      transform: translateX(-50%);
+    }
+  }
+}

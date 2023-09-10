@@ -1,5 +1,5 @@
-import Swiper, { Navigation, EffectCoverflow, EffectCards } from 'swiper';
-Swiper.use([Navigation,EffectCoverflow,EffectCards]);
+import Swiper, { Navigation, Pagination, EffectCoverflow, EffectCards } from 'swiper';
+Swiper.use([Navigation,Pagination,EffectCoverflow,EffectCards]);
 
 const clientSlider = document.querySelector('.clients-slider');
 
@@ -31,6 +31,7 @@ if(mainSliders) {
   mainSliders.forEach(slider => {
     const nextBtn = slider.parentNode.querySelector('.swiper-button-next');
     const prevBtn = slider.parentNode.querySelector('.swiper-button-prev');
+    const pag = slider.parentNode.querySelector('.swiper-pagination');
 
     new Swiper(slider, {
         slidesPerView: 1,
@@ -39,6 +40,12 @@ if(mainSliders) {
         navigation: {
           nextEl: nextBtn,
           prevEl: prevBtn,
+        },
+
+        pagination: {
+          el: pag,
+          dynamicBullets: true,
+          clickable: true
         }
     });
   });

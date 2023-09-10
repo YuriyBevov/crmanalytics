@@ -1,5 +1,69 @@
 .case-card {
-  display: grid;
+  @extend .flex-column;
+
+  &__top {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 10px;
+    align-items: center;
+
+    /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+    @include m-b-down(640px) {
+        grid-template-columns: 1fr;
+    }
+
+    &-content {
+      @extend .flex-column;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 350px;
+      object-fit: contain;
+
+      @include m-b-down(640px) {
+        max-height: 200px;
+        display: none;
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: 12px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    color: var(--primary);
+  }
+
+  ul {
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  p,span,li {
+    @extend .lw-base-text;
+
+    color: var(--primary);
+
+    @include m-b-tablet-down {
+      font-size: 16px;
+    }
+  }
+}
+
+//.case-card {
+  /*display: grid;
   grid-template-columns: 4fr 3fr;
   grid-gap: 20px;
 
@@ -32,9 +96,9 @@
 
       p,span,li {
         @extend .lw-base-text;
-        font-size: 14px;
-        color: var(--primary);
+        /*font-size: 14px;*/
+        /*color: var(--primary);
       }
     }
   }
-}
+}*/

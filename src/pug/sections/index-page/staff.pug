@@ -2,7 +2,7 @@ include ../../mixins/bitrix-contain-title
 include ../../mixins/main-btn
 include ../../mixins/staff-card
 
-section.lw-section
+section.lw-section.staff
   .lw-container.lw-section-column-container
     +bitrix-contain-title({
       tag: 'h2',
@@ -37,8 +37,10 @@ section.lw-section
               text: 'Финансовый директор также занимается управлением активами и финансовым планированием. Он следит за состоянием денежных потоков предприятия, оптимизирует использование ресурсов и осуществляет финансовое планирование на среднесрочную и долгосрочную перспективы.'
             })
 
-      .swiper-button-prev
-      .swiper-button-next
+      .swiper-controls
+        .swiper-button-prev
+        .swiper-pagination
+        .swiper-button-next
 
     +main-btn({
       tag: 'a',

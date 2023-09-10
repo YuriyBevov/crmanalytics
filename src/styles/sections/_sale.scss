@@ -1,9 +1,38 @@
 .sale {
+  .sale-slider {
+    padding-bottom: 60px;
+
+    @include m-b-tablet-down {
+      padding-bottom: 40px;
+    }
+  }
+
   .swiper-container,
   .swiper-wrapper {
     width: 100%;
-    /*max-width: 1000px;*/
     height: auto;
     margin: 0 auto;
+  }
+
+  .swiper-controls {
+    position: absolute;
+    bottom: 0;
+    top: initial;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 40px;
+    z-index: 3;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: var(--primary);
+    }
+
+    .swiper-pagination-bullet,
+    .swiper-pagination-bullet-active  {
+      border: var(--primary);
+      background-color: var(--primary);
+    }
   }
 }
